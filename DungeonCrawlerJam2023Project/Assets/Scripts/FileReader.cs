@@ -4,8 +4,7 @@ using System.IO;
 using UnityEngine;
 
 public class FileReader : MonoBehaviour {
-    public static int rowNum, colNum;
-    public static void ReadFile(string filePath) {
+    public void ReadFile(string filePath) {
         string text = File.ReadAllText(filePath);
 
         int row = 0;
@@ -18,6 +17,7 @@ public class FileReader : MonoBehaviour {
             } else {
                 // Display row, column and character to console while getting next character
                 Debug.LogFormat("Character '{0}' at row {1}, column {2}", c, row, col);
+                this.gameObject.GetComponentInParent<GameManagerScript>().PlaceObject(c, col, row);
                 col++;
             }
         }
