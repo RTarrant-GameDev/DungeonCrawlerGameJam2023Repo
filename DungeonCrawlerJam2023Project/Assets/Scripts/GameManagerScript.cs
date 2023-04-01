@@ -4,16 +4,8 @@ using UnityEngine;
 
 public class GameManagerScript : MonoBehaviour {
     public GameObject mazeFloor;
-    public GameObject wall;
     
-    // Start is called before the first frame update
     void Start() {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        FileReader.ReadFile("Assets/LevelFiles/Level1.txt");
     }
 }
