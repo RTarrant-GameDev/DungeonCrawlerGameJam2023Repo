@@ -15,8 +15,6 @@ public class FileReader : MonoBehaviour {
                 row++;
                 col = 0;
             } else {
-                // Display row, column and character to console while getting next character
-                Debug.LogFormat("Character '{0}' at row {1}, column {2}", c, row, col);
                 this.gameObject.GetComponentInParent<GameManagerScript>().PlaceObject(c, col, row);
                 col++;
             }

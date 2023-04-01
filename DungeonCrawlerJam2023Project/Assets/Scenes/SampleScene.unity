@@ -342,6 +342,12 @@ MonoBehaviour:
   - levelX: 15
     levelZ: 15
     filePath: Assets/LevelFiles/Level1.txt
+  - levelX: 10
+    levelZ: 20
+    filePath: Assets/LevelFiles/Level2.txt
+  - levelX: 20
+    levelZ: 20
+    filePath: Assets/LevelFiles/Level3.txt
   mazeObjects:
   - associatedKey: 87
     objectToSpawn: {fileID: 6749470096195591996, guid: 6da5cdaab641d6843b5c69a65f0f73a9, type: 3}
@@ -439,8 +445,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2090557521}
   m_LocalRotation: {x: -0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 6, y: 4.5, z: 20}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalPosition: {x: 6, y: 4.5, z: 22}
+  m_LocalScale: {x: 3, y: 1, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 505403696}
