@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameManagerScript : MonoBehaviour {
     public LevelObject[] levels;
     public MazeObject[] mazeObjects;
-    public GameObject mazeFloor;
+    public GameObject mazeSpawner;
     
     void Update() {
         if (Input.GetKeyDown(KeyCode.Alpha1)) {
@@ -24,7 +24,7 @@ public class GameManagerScript : MonoBehaviour {
     public void PlaceObject(char foundCharacter, float posX, float posZ) {
         foreach(MazeObject mObjs in mazeObjects) {
             if(mObjs.associatedKey == foundCharacter) {
-                Instantiate(mObjs.objectToSpawn, new Vector3(posX, 1.0f, posZ), mObjs.objectToSpawn.transform.rotation).transform.parent = mazeFloor.transform.parent;
+                Instantiate(mObjs.objectToSpawn, new Vector3(posX, 1.0f, posZ), mObjs.objectToSpawn.transform.rotation).transform.parent = mazeSpawner.transform;
             }
         } 
     }
