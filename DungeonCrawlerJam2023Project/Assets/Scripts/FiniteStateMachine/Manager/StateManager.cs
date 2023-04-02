@@ -25,4 +25,33 @@ public class StateManager : MonoBehaviour {
             InstanceRef = this;
         }
     }
+
+    void Update() {
+        mainCam = GameObject.FindWithTag("MainCamera");
+
+        if(IActiveState != null) {
+            IActiveState.StateUpdate();
+        }
+
+        switch(GameState) {
+            case gameState.MainMenu:
+                this.gameObject.GetComponentInChildren<UIHandler>().setCanvasState("Main Menu");
+                break;
+
+            case gameState.Cinematic:
+                this.gameObject.GetComponentInChildren<UIHandler>().setCanvasState("LoadingScreen");
+                break;
+
+            case gameState.Play:
+                this.gameObject.GetComponentInChildren<UIHandler>().setCanvasState("Gameplay");
+                break;
+
+            default:
+                break;
+        }
+    }
+
+    public void SwitchState(IBaseState nextState) {
+        IActiveState = nextState;
+    }
 }

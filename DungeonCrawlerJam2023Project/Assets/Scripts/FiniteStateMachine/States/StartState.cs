@@ -13,10 +13,14 @@ public class StartState : IBaseState {
 
         if(scene.name != "StartState") {
             SceneManager.LoadScene("StartState");
-
-            stateManager.GameState = gameState.MainMenu;
         }
+
+        stateManager.GameState = gameState.MainMenu;
     }
 
     public void StateUpdate() {}
+
+    public void SwitchOver(){ //Changes to PlayState. Will be testing this after FSM is implemented to an acceptable state.
+        StateManager.InstanceRef.SwitchState(new PlayState(StateManager.InstanceRef));
+    }
 }

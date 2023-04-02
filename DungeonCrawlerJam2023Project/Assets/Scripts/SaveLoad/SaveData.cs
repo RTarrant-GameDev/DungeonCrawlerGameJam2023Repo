@@ -4,6 +4,7 @@ using UnityEngine;
 
 [System.Serializable]
 public class SaveData {
+    public int saveSlot;
     public int savedXPCount;
     public int savedLevelNumber;
     public Vector3 savedPlayerPos;

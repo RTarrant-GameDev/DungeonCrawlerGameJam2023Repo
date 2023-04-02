@@ -7,4 +7,6 @@ using System.IO;
 public struct LevelObject {
     public float levelX, levelZ;
     public string filePath;
+    public string levelLoadText;
+    public Sprite loadScreenImage;
 }

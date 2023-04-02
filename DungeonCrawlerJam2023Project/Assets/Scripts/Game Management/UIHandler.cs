@@ -25,12 +25,16 @@ public class UIHandler : MonoBehaviour {
                 enableCanvas(gameCanvas[1]);
                 break;
 
-            case "Gameover":
+            case "Pause":
                 enableCanvas(gameCanvas[2]); 
                 break;
 
+            case "Gameover":
+                enableCanvas(gameCanvas[3]); 
+                break;
+
             case "LoadingScreen":
-                enableCanvas(gameCanvas[3]);
+                enableCanvas(gameCanvas[4]);
                 break;
         }
     }
@@ -39,6 +43,8 @@ public class UIHandler : MonoBehaviour {
         foreach(GameObject canvas in gameCanvas) {
             if(canvas != canvasToEnable) {
                 canvas.SetActive(false);
+            } else {
+                canvas.SetActive(true);
             }
         }
     }

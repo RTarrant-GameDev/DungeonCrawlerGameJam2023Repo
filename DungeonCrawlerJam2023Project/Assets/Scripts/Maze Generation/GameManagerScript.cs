@@ -3,9 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManagerScript : MonoBehaviour {
+    public LevelObject currentLevel;
     public LevelObject[] levels;
     public MazeObject[] mazeObjects;
     public GameObject mazeSpawner;
+    public string endGameLoadText;
+    public Sprite endGameLoadImage;
+
+    public static GameManagerScript Instance { get; private set; }
+    void Awake(){
+        if (Instance == null) {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        } else {
+            Destroy(gameObject);
+        }
+    }
     
     void Update() {
         if (Input.GetKeyDown(KeyCode.Alpha1)) {
@@ -23,6 +36,11 @@ public class GameManagerScript : MonoBehaviour {
         }
     }
 
+    public void StartLevel(LevelObject levelToGenerate) {
+        currentLevel = levelToGenerate;
+        this.gameObject.GetComponentInChildren<UIHandler>().gameCanvas[4].GetComponent<loadScreen>().DisplayLoadingText(levelToGenerate.levelLoadText);
+    }
+
     //So that function can be called when loading game
     public void GenerateLevel(LevelObject levelToGenerate) {
         if(mazeSpawner.transform.childCount > 0) {
@@ -31,7 +49,7 @@ public class GameManagerScript : MonoBehaviour {
             }
         }
 
-        this.gameObject.GetComponentInChildren<FileReader>().ReadFile(levelToGenerate.filePath);
+        this.gameObject.GetComponent<FileReader>().ReadFile(levelToGenerate.filePath);
     }
 
     public void PlaceObject(char foundCharacter, float posX, float posZ) {
