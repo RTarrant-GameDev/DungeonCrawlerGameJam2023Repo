@@ -393,7 +393,7 @@ MonoBehaviour:
   - associatedKey: 87
     objectToSpawn: {fileID: 6749470096195591996, guid: 6da5cdaab641d6843b5c69a65f0f73a9, type: 3}
   - associatedKey: 80
-    objectToSpawn: {fileID: 8162426451724138470, guid: 0df1a88e8deb59c4f83ff88b4070ed34, type: 3}
+    objectToSpawn: {fileID: 6687633006253761627, guid: 0df1a88e8deb59c4f83ff88b4070ed34, type: 3}
   mazeSpawner: {fileID: 927903933}
 --- !u!1 &2090557521
 GameObject:
