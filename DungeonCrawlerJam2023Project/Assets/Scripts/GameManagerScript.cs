@@ -14,6 +14,12 @@ public class GameManagerScript : MonoBehaviour {
             GenerateLevel(levels[1]);
         } else if (Input.GetKeyDown(KeyCode.Alpha3)) {
             GenerateLevel(levels[2]);
+        } else if (Input.GetKeyDown(KeyCode.Alpha4)) {
+            GenerateLevel(levels[3]);
+        } else if (Input.GetKeyDown(KeyCode.Alpha5)) {
+            GenerateLevel(levels[4]);
+        } else if (Input.GetKeyDown(KeyCode.Alpha6)) {
+            GenerateLevel(levels[5]);
         }
     }
 

@@ -151,6 +151,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 927903934}
   - {fileID: 2090557525}
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -316,12 +317,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 927903933}
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: -4.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 6, y: 0, z: 22}
+  m_LocalScale: {x: 3, y: 1, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2090557525}
+  m_Father: {fileID: 505403696}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1368267541
@@ -379,12 +380,21 @@ MonoBehaviour:
   - levelX: 20
     levelZ: 20
     filePath: Assets/LevelFiles/Level3.txt
+  - levelX: 12
+    levelZ: 11
+    filePath: Assets/LevelFiles/Level4.txt
+  - levelX: 19
+    levelZ: 12
+    filePath: Assets/LevelFiles/Level5.txt
+  - levelX: 17
+    levelZ: 15
+    filePath: Assets/LevelFiles/Level6.txt
   mazeObjects:
   - associatedKey: 87
     objectToSpawn: {fileID: 6749470096195591996, guid: 6da5cdaab641d6843b5c69a65f0f73a9, type: 3}
   - associatedKey: 80
     objectToSpawn: {fileID: 8162426451724138470, guid: 0df1a88e8deb59c4f83ff88b4070ed34, type: 3}
-  mazeFloor: {fileID: 2090557521}
+  mazeSpawner: {fileID: 927903933}
 --- !u!1 &2090557521
 GameObject:
   m_ObjectHideFlags: 0
@@ -438,7 +448,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 86c0c0971a8e77841b58c68cc8b1c257, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -479,8 +489,7 @@ Transform:
   m_LocalPosition: {x: 6, y: 4.5, z: 22}
   m_LocalScale: {x: 3, y: 1, z: 3}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 927903934}
+  m_Children: []
   m_Father: {fileID: 505403696}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
