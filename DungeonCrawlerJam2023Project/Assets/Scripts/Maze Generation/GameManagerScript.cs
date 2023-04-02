@@ -23,7 +23,8 @@ public class GameManagerScript : MonoBehaviour {
         }
     }
 
-    void GenerateLevel(LevelObject levelToGenerate) {
+    //So that function can be called when loading game
+    public void GenerateLevel(LevelObject levelToGenerate) {
         if(mazeSpawner.transform.childCount > 0) {
             foreach(Transform child in mazeSpawner.transform) {
                 Destroy(child.gameObject);
