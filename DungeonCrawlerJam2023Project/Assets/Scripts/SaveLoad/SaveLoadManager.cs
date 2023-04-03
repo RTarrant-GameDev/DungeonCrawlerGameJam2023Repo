@@ -19,8 +19,6 @@ public class SaveLoadManager : MonoBehaviour {
     }
 
     public void NewGame() {
-        StateManager.InstanceRef.GameState = gameState.Play;
-        GameManagerScript.Instance.GenerateLevel(GameManagerScript.Instance.levels[0]);
         SaveData data = new SaveData();
         data.currentLevel = GameManagerScript.Instance.levels[0];
         data.savedPlayerPos = GameObject.Find("Player(Clone)").transform.position;
@@ -38,7 +36,7 @@ public class SaveLoadManager : MonoBehaviour {
             FileStream file = File.Open(savePath, FileMode.Open);
             SaveData data = (SaveData)bf.Deserialize(file);
 
-            GameObject.Find("GameManager").GetComponent<GameManagerScript>().GenerateLevel(data.currentLevel);
+            GameObject.Find("GameManager").GetComponent<GameManagerScript>().GenerateSpawner();
 
             //run function to set level, stats, and XP count here
             GameObject.Find("Player(Clone)").GetComponent<PlayerLevelScript>().setLevelValuesFromSave(data.savedLevelNumber, data.savedXPCount);

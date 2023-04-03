@@ -17,7 +17,7 @@ public class UIHandler : MonoBehaviour {
 
     void checkUIState() {
         switch(currentState) {
-            case "Main Menu":
+            case "MainMenu":
                 enableCanvas(gameCanvas[0]);
                 break;
             
@@ -29,7 +29,7 @@ public class UIHandler : MonoBehaviour {
                 enableCanvas(gameCanvas[2]); 
                 break;
 
-            case "Gameover":
+            case "GameOver":
                 enableCanvas(gameCanvas[3]); 
                 break;
 

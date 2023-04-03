@@ -5,15 +5,17 @@ using System.IO;
 using TMPro;
 using UnityEngine.UI;
 
-public class loadGame : MonoBehaviour {
+public class pauseLoadMenu : MonoBehaviour {
     public GameObject saveSlotPrefab;
     public Transform saveSlotsPanel;
-
     // Start is called before the first frame update
-    void Start() {
-        string[] saveFiles = Directory.GetFiles(Application.persistentDataPath, "*.dat");
+    void OnEnable() {
+        LoadSaveSlots();
+    }
 
-        foreach(string saveFile in saveFiles) {
+    void LoadSaveSlots() {
+        string[] saveFiles = Directory.GetFiles(Application.persistentDataPath, "*.dat");
+        foreach (string saveFile in saveFiles) {
             GameObject saveSlot = Instantiate(saveSlotPrefab, saveSlotsPanel);
             int saveSlotNumber;
             if (int.TryParse(Path.GetFileNameWithoutExtension(saveFile), out saveSlotNumber)) {
@@ -25,15 +27,10 @@ public class loadGame : MonoBehaviour {
         }
     }
 
-    void LoadGame(int slot) {
-        SaveData data = SaveLoadManager.Instance.LoadGame(slot);
-
-        if(data != null) {
+    void LoadGame(int saveSlot) {
+        SaveData data = SaveLoadManager.Instance.LoadGame(saveSlot);
+        if (data != null) {
             StateManager.InstanceRef.SwitchState(new PlayState(StateManager.InstanceRef));
         }
-    }
-
-    public void Back() {
-        this.gameObject.SetActive(false);
     }
 }

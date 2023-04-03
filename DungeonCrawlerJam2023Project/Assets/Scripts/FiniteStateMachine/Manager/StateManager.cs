@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum gameState { Default, MainMenu, Play, Pause, Cinematic, Gameover }
+public enum gameState { Default, MainMenu, Play, Pause, Cinematic, GameOver }
 public class StateManager : MonoBehaviour {
     private IBaseState IActiveState;
     public static StateManager InstanceRef = null;
@@ -35,7 +35,7 @@ public class StateManager : MonoBehaviour {
 
         switch(GameState) {
             case gameState.MainMenu:
-                this.gameObject.GetComponentInChildren<UIHandler>().setCanvasState("Main Menu");
+                this.gameObject.GetComponentInChildren<UIHandler>().setCanvasState("MainMenu");
                 break;
 
             case gameState.Cinematic:
@@ -44,6 +44,15 @@ public class StateManager : MonoBehaviour {
 
             case gameState.Play:
                 this.gameObject.GetComponentInChildren<UIHandler>().setCanvasState("Gameplay");
+                GameManagerScript.Instance.GenerateSpawner();
+                break;
+
+            case gameState.Pause:
+                this.gameObject.GetComponentInChildren<UIHandler>().setCanvasState("Pause");
+                break;
+
+            case gameState.GameOver:
+                this.gameObject.GetComponentInChildren<UIHandler>().setCanvasState("GameOver");
                 break;
 
             default:

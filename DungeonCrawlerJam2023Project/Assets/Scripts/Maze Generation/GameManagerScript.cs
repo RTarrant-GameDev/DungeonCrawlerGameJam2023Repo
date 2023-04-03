@@ -7,6 +7,7 @@ public class GameManagerScript : MonoBehaviour {
     public LevelObject[] levels;
     public MazeObject[] mazeObjects;
     public GameObject mazeSpawner;
+    public GameObject mazeSpawnerPrefab;
     public string endGameLoadText;
     public Sprite endGameLoadImage;
 
@@ -38,7 +39,17 @@ public class GameManagerScript : MonoBehaviour {
 
     public void StartLevel(LevelObject levelToGenerate) {
         currentLevel = levelToGenerate;
+        this.gameObject.GetComponentInChildren<UIHandler>().setCanvasState("LoadingScreen");
         this.gameObject.GetComponentInChildren<UIHandler>().gameCanvas[4].GetComponent<loadScreen>().DisplayLoadingText(levelToGenerate.levelLoadText);
+    }
+
+    public void GenerateSpawner() {
+        if(mazeSpawner == null) {
+            GameObject mazeSpawnerObj = Instantiate(mazeSpawnerPrefab);
+            mazeSpawner = mazeSpawnerObj.transform.GetChild(0).gameObject;
+
+            GenerateLevel(currentLevel);
+        }
     }
 
     //So that function can be called when loading game
@@ -47,7 +58,7 @@ public class GameManagerScript : MonoBehaviour {
             foreach(Transform child in mazeSpawner.transform) {
                 Destroy(child.gameObject);
             }
-        }
+        } 
 
         this.gameObject.GetComponent<FileReader>().ReadFile(levelToGenerate.filePath);
     }

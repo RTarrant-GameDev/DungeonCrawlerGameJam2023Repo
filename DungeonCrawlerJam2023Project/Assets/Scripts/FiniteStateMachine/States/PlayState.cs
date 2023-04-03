@@ -5,10 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class PlayState : IBaseState {
     private StateManager stateManager;
+    private GameManagerScript gameManager;
     private Scene scene;
 
     public PlayState (StateManager smRef) {
         stateManager = smRef;
+
         scene = SceneManager.GetActiveScene();
 
         if(scene.name != "PlayState") {
@@ -16,8 +18,6 @@ public class PlayState : IBaseState {
         }
 
         stateManager.GameState = gameState.Play;
-
-        GameManagerScript.Instance.mazeSpawner = GameObject.Find("maze");
     }
 
     public void StateUpdate() {}

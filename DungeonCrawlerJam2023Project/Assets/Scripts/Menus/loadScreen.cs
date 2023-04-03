@@ -7,10 +7,10 @@ public class loadScreen : MonoBehaviour {
     public TextMeshProUGUI storyText;
 
     public void DisplayLoadingText(string textToDisplay) {
-        storyText.SetText(textToDisplay);
+        storyText.text = textToDisplay;
     }
 
     public void StartLevel() {
-        GameManagerScript.Instance.GenerateLevel(GameManagerScript.Instance.currentLevel);
+        StateManager.InstanceRef.SwitchState(new PlayState(StateManager.InstanceRef));
     }
 }
