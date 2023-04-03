@@ -39,6 +39,10 @@ public class PlayerInput : MonoBehaviour {
                 }
             }
         }
+
+        if(Input.GetKeyDown(KeyCode.P)) {
+            StateManager.InstanceRef.GameState = gameState.Pause;
+        }
     }
 
     public void CurrentClickedGameObject (GameObject gameObject) {

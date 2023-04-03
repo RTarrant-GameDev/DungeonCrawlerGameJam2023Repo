@@ -11,10 +11,6 @@ public class mainMenu : MonoBehaviour {
                 StateManager.InstanceRef.GameState = gameState.Cinematic;
                 GameManagerScript.Instance.StartLevel(GameManagerScript.Instance.levels[0]);
                 break;
-            
-            case "LoadGame":
-                loadGameMenu.SetActive(true);
-                break;
 
             case "ExitGame": 
                 Application.Quit();

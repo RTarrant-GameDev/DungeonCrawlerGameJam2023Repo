@@ -10,6 +10,7 @@ public class GameManagerScript : MonoBehaviour {
     public GameObject mazeSpawnerPrefab;
     public string endGameLoadText;
     public Sprite endGameLoadImage;
+    public bool mazeGenerated;
 
     public static GameManagerScript Instance { get; private set; }
     void Awake(){
@@ -41,6 +42,7 @@ public class GameManagerScript : MonoBehaviour {
         currentLevel = levelToGenerate;
         this.gameObject.GetComponentInChildren<UIHandler>().setCanvasState("LoadingScreen");
         this.gameObject.GetComponentInChildren<UIHandler>().gameCanvas[4].GetComponent<loadScreen>().DisplayLoadingText(levelToGenerate.levelLoadText);
+       
     }
 
     public void GenerateSpawner() {
