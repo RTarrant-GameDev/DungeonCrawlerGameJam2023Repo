@@ -4,10 +4,6 @@ using UnityEngine;
 
 public class pauseMenu : MonoBehaviour {
     public GameObject mainPauseMenu;
-    public GameObject pauseSaveMenu;
-    public GameObject pauseLoadMenu;
-    public GameObject saveSuccessfulMessage;
-
     // OnEnable is called each time the parent gameObject that the script is attached to is set to true
     void OnEnable() {
         mainPauseMenu.SetActive(true);

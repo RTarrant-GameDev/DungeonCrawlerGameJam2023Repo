@@ -962,9 +962,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainPauseMenu: {fileID: 1743504866}
-  pauseSaveMenu: {fileID: 0}
-  pauseLoadMenu: {fileID: 0}
-  saveSuccessfulMessage: {fileID: 0}
 --- !u!1 &380404680
 GameObject:
   m_ObjectHideFlags: 0
@@ -1524,7 +1521,6 @@ GameObject:
   - component: {fileID: 728529199}
   - component: {fileID: 728529200}
   - component: {fileID: 728529201}
-  - component: {fileID: 728529202}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1676,18 +1672,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 977e53d85edaf0b4e81599b47604d9ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &728529202
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 728529197}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7639e5109a0673248af8a9ae3fe78358, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &805954609
