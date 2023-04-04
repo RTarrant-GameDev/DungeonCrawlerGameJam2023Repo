@@ -10,7 +10,7 @@ public class GameManagerScript : MonoBehaviour {
     public GameObject mazeSpawnerPrefab;
     public string endGameLoadText;
     public Sprite endGameLoadImage;
-    public bool mazeGenerated;
+    public PlayerLevel currentPlayerLevel;
 
     public static GameManagerScript Instance { get; private set; }
     void Awake(){
@@ -21,28 +21,35 @@ public class GameManagerScript : MonoBehaviour {
             Destroy(gameObject);
         }
     }
-    
-    void Update() {
-        if (Input.GetKeyDown(KeyCode.Alpha1)) {
-            GenerateLevel(levels[0]);
-        } else if (Input.GetKeyDown(KeyCode.Alpha2)) {
-            GenerateLevel(levels[1]);
-        } else if (Input.GetKeyDown(KeyCode.Alpha3)) {
-            GenerateLevel(levels[2]);
-        } else if (Input.GetKeyDown(KeyCode.Alpha4)) {
-            GenerateLevel(levels[3]);
-        } else if (Input.GetKeyDown(KeyCode.Alpha5)) {
-            GenerateLevel(levels[4]);
-        } else if (Input.GetKeyDown(KeyCode.Alpha6)) {
-            GenerateLevel(levels[5]);
+
+    public void NextLevel() {
+        if (System.Array.IndexOf(levels, currentLevel) < levels.Length-1) {
+            StartLevel(levels[System.Array.IndexOf(levels, currentLevel)+1]); //start next level
+        } else {
+            if(mazeSpawner != null && mazeSpawner.transform.childCount > 0) {
+                foreach(Transform child in mazeSpawner.transform) {
+                    Destroy(child.gameObject);
+                }
+            } 
+
+            StateManager.InstanceRef.SwitchState(new StartState(StateManager.InstanceRef));
+            StateManager.InstanceRef.GameState = gameState.Cinematic;
+            this.gameObject.GetComponentInChildren<UIHandler>().gameCanvas[4].GetComponent<loadScreen>().DisplayLoadingText(endGameLoadText);
         }
     }
 
     public void StartLevel(LevelObject levelToGenerate) {
+        if(mazeSpawner != null && mazeSpawner.transform.childCount > 0) {
+            foreach(Transform child in mazeSpawner.transform) {
+                Destroy(child.gameObject);
+            }
+        } 
+
+        StateManager.InstanceRef.SwitchState(new StartState(StateManager.InstanceRef));
+
         currentLevel = levelToGenerate;
-        this.gameObject.GetComponentInChildren<UIHandler>().setCanvasState("LoadingScreen");
+        StateManager.InstanceRef.GameState = gameState.Cinematic;
         this.gameObject.GetComponentInChildren<UIHandler>().gameCanvas[4].GetComponent<loadScreen>().DisplayLoadingText(levelToGenerate.levelLoadText);
-       
     }
 
     public void GenerateSpawner() {
@@ -54,14 +61,12 @@ public class GameManagerScript : MonoBehaviour {
         }
     }
 
+    public void SavePlayerData() {
+        currentPlayerLevel = GameObject.Find("Player(Clone)").GetComponent<PlayerLevelScript>().currentLevel;
+    }
+
     //So that function can be called when loading game
     public void GenerateLevel(LevelObject levelToGenerate) {
-        if(mazeSpawner.transform.childCount > 0) {
-            foreach(Transform child in mazeSpawner.transform) {
-                Destroy(child.gameObject);
-            }
-        } 
-
         this.gameObject.GetComponent<FileReader>().ReadFile(levelToGenerate.filePath);
     }
 
