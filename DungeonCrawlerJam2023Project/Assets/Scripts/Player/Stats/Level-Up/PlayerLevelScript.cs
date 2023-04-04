@@ -15,7 +15,15 @@ public class PlayerLevelScript : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        checkXPForLevelUp();
+        if(currentLevel.levelNumber < levels.Length) {
+            checkXPForLevelUp();
+        }
+    }
+
+    public void AddXP(int xpToAdd) {
+        if(currentLevel.levelNumber < levels.Length) {
+            currXP += xpToAdd;
+        }
     }
 
     void checkXPForLevelUp() {
@@ -25,7 +33,7 @@ public class PlayerLevelScript : MonoBehaviour {
     }
     
     void levelUp(int levelNumber) {
-        currentLevel = levels[currentLevel.levelNumber];
+        currentLevel = levels[levelNumber];
         currXP -= currentLevel.xpToReachLevel;
         //set health and damage here
     }

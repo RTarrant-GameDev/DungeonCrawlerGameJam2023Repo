@@ -306,7 +306,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentLevel:
-    levelNumber: 0
+    levelNumber: 1
     xpToReachLevel: 0
     newLevelHP: 0
     newLevelDmg: 0
@@ -315,8 +315,12 @@ MonoBehaviour:
     xpToReachLevel: 0
     newLevelHP: 0
     newLevelDmg: 0
-  - levelNumber: 1
+  - levelNumber: 2
     xpToReachLevel: 1000
+    newLevelHP: 0
+    newLevelDmg: 0
+  - levelNumber: 3
+    xpToReachLevel: 1500
     newLevelHP: 0
     newLevelDmg: 0
   currXP: 0

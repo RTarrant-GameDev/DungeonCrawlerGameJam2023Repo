@@ -40,7 +40,7 @@ public class PlayerInput : MonoBehaviour {
             }
         }
 
-        if(Input.GetKeyDown(KeyCode.P)) {
+        if(Input.GetKeyDown(KeyCode.Escape)) {
             StateManager.InstanceRef.GameState = gameState.Pause;
         }
     }
