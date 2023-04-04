@@ -11,6 +11,10 @@ public class loadScreen : MonoBehaviour {
     }
 
     public void StartLevel() {
-        StateManager.InstanceRef.SwitchState(new PlayState(StateManager.InstanceRef));
+        if(storyText.text != GameManagerScript.Instance.endGameLoadText){
+            StateManager.InstanceRef.SwitchState(new PlayState(StateManager.InstanceRef));
+        } else {
+            StateManager.InstanceRef.GameState = gameState.MainMenu;
+        }
     }
 }
