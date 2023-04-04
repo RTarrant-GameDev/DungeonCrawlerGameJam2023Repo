@@ -1376,6 +1376,8 @@ MonoBehaviour:
     objectToSpawn: {fileID: 6749470096195591996, guid: 6da5cdaab641d6843b5c69a65f0f73a9, type: 3}
   - associatedKey: 80
     objectToSpawn: {fileID: 6687633006253761627, guid: 0df1a88e8deb59c4f83ff88b4070ed34, type: 3}
+  - associatedKey: 88
+    objectToSpawn: {fileID: 8489804989553642005, guid: afc5d022c4043a1418ac574c791932f1, type: 3}
   mazeSpawner: {fileID: 0}
   mazeSpawnerPrefab: {fileID: 4008347367771799831, guid: ff3e3820461645844aca5ee77f37f77a, type: 3}
   endGameLoadText: 'You have made it out of the dungeon. As you finally leave, and
