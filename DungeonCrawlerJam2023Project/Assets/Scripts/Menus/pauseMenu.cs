@@ -3,10 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class pauseMenu : MonoBehaviour {
-    public GameObject mainPauseMenu;
     // OnEnable is called each time the parent gameObject that the script is attached to is set to true
     void OnEnable() {
-        mainPauseMenu.SetActive(true);
         Time.timeScale = 0.0f;
     }
 
