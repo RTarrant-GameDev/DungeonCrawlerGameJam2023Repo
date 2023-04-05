@@ -29,6 +29,10 @@ public class PlayerInput : MonoBehaviour {
         if(Input.GetKeyUp(rotateLeft)) controller.RotateLeft();
         if(Input.GetKeyUp(rotateRight)) controller.RotateRight();
 
+        if(Input.GetKeyDown(KeyCode.L)) {
+            this.gameObject.GetComponent<PlayerLevelScript>().AddXP(450);
+        }
+
         if(Input.GetMouseButtonDown(0)) { 
             RaycastHit raycastHit;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
