@@ -11,6 +11,7 @@ public class GameManagerScript : MonoBehaviour {
     public string endGameLoadText;
     public Sprite endGameLoadImage;
     public PlayerLevel currentPlayerLevel;
+    public int currentXPCount;
 
     public static GameManagerScript Instance { get; private set; }
     void Awake(){
@@ -63,6 +64,7 @@ public class GameManagerScript : MonoBehaviour {
 
     public void SavePlayerData() {
         currentPlayerLevel = GameObject.Find("Player(Clone)").GetComponent<PlayerLevelScript>().currentLevel;
+        currentXPCount = GameObject.Find("Player(Clone)").GetComponent<PlayerLevelScript>().currXP;
     }
 
     //So that function can be called when loading game
@@ -73,6 +75,10 @@ public class GameManagerScript : MonoBehaviour {
     public void PlaceObject(char foundCharacter, float posX, float posZ) {
         foreach(MazeObject mObjs in mazeObjects) {
             if(mObjs.associatedKey == foundCharacter) {
+                if(mObjs.objectToSpawn.name == "Player") {
+                    Debug.Log("Player should be getting values from GameManager");
+                    mObjs.objectToSpawn.GetComponent<PlayerLevelScript>().setLevelValuesFromSave(currentPlayerLevel.levelNumber, currentXPCount);
+                }
                 Instantiate(mObjs.objectToSpawn, new Vector3(posX, 1.0f, posZ), mObjs.objectToSpawn.transform.rotation).transform.parent = mazeSpawner.transform;
             }
         } 

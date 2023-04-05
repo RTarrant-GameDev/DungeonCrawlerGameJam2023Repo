@@ -7,12 +7,6 @@ public class PlayerLevelScript : MonoBehaviour {
     public PlayerLevel[] levels;
     public int currXP;
 
-    // Start is called before the first frame update
-    void Start() {
-        currXP = 0;
-        currentLevel = levels[0];
-    }
-
     // Update is called once per frame
     void Update() {
         if(currentLevel.levelNumber < levels.Length) {
@@ -35,7 +29,8 @@ public class PlayerLevelScript : MonoBehaviour {
     void levelUp(int levelNumber) {
         currentLevel = levels[levelNumber];
         currXP -= currentLevel.xpToReachLevel;
-        //set health and damage here
+        this.gameObject.GetComponent<PlayerHealth>().SetHealthPostLevelUp(currentLevel.newLevelHP);
+        //set damage here
     }
 
     public void setLevelValuesFromSave(int levelNum, int xpCount) {
@@ -44,7 +39,8 @@ public class PlayerLevelScript : MonoBehaviour {
         foreach(PlayerLevel level in levels) {
             if(levelNum == level.levelNumber) {
                 currentLevel = level;
-                //set damage and hp in next two lines before breaking from foreach loop
+                this.gameObject.GetComponent<PlayerHealth>().maxHealth = currentLevel.newLevelHP;
+                //set damage before breaking from foreach loop
                 break;
             }
         }
