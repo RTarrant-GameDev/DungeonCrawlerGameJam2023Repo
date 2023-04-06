@@ -50,8 +50,8 @@ public class PlayerInput : MonoBehaviour {
     }
 
     public void CurrentClickedGameObject (GameObject gameObject) {
-        if (gameObject.tag == "GateSwitch") {
-            //Insert code here
+        if (gameObject.name == "Enemy(Clone)") {
+            this.gameObject.GetComponent<PlayerAttack>().AttackEnemy(gameObject);
         }
     }
 }

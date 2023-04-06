@@ -194,6 +194,7 @@ GameObject:
   - component: {fileID: 2548012456660699885}
   - component: {fileID: 4649253806477881879}
   - component: {fileID: -4116223178580155573}
+  - component: {fileID: -892480430377074131}
   - component: {fileID: 5386994031790862656}
   m_Layer: 0
   m_Name: Player
@@ -307,24 +308,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentLevel:
-    levelNumber: 1
-    xpToReachLevel: 0
-    newLevelHP: 0
-    newLevelDmg: 0
+    levelNumber: 6
+    xpToReachLevel: 4500
+    newLevelHP: 500
+    newLevelDmg: 130
   levels:
   - levelNumber: 1
     xpToReachLevel: 0
     newLevelHP: 100
-    newLevelDmg: 0
+    newLevelDmg: 20
   - levelNumber: 2
     xpToReachLevel: 1000
     newLevelHP: 150
-    newLevelDmg: 0
+    newLevelDmg: 30
   - levelNumber: 3
     xpToReachLevel: 1500
     newLevelHP: 200
-    newLevelDmg: 0
-  currXP: 0
+    newLevelDmg: 40
+  - levelNumber: 4
+    xpToReachLevel: 2500
+    newLevelHP: 300
+    newLevelDmg: 60
+  - levelNumber: 5
+    xpToReachLevel: 3000
+    newLevelHP: 420
+    newLevelDmg: 90
+  - levelNumber: 6
+    xpToReachLevel: 5000
+    newLevelHP: 500
+    newLevelDmg: 130
+  currXP: 700
 --- !u!114 &-4116223178580155573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -337,8 +350,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b5bdb062e06c254eaa8593dd2d841db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 0
+  maxHealth: 500
   currHealth: 0
+--- !u!114 &-892480430377074131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6687633006253761627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50ba19bbc84dc0840a55e9a50ead3a80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dmgNumber: 0
 --- !u!54 &5386994031790862656
 Rigidbody:
   m_ObjectHideFlags: 0

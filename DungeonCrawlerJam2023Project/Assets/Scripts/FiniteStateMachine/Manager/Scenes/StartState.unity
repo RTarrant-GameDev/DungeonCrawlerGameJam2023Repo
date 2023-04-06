@@ -1581,6 +1581,8 @@ MonoBehaviour:
     objectToSpawn: {fileID: 6687633006253761627, guid: 0df1a88e8deb59c4f83ff88b4070ed34, type: 3}
   - associatedKey: 88
     objectToSpawn: {fileID: 8489804989553642005, guid: afc5d022c4043a1418ac574c791932f1, type: 3}
+  - associatedKey: 69
+    objectToSpawn: {fileID: 5205440647973694896, guid: a1c0bf494c1e69349af7aad49182f0a9, type: 3}
   mazeSpawner: {fileID: 0}
   mazeSpawnerPrefab: {fileID: 4008347367771799831, guid: ff3e3820461645844aca5ee77f37f77a, type: 3}
   endGameLoadText: 'You have made it out of the dungeon. As you finally leave, and
@@ -1598,10 +1600,11 @@ MonoBehaviour:
     land. After all, SOULCLEAVER HUNGERS!'
   endGameLoadImage: {fileID: 0}
   currentPlayerLevel:
-    levelNumber: 0
+    levelNumber: 1
     xpToReachLevel: 0
-    newLevelHP: 0
-    newLevelDmg: 0
+    newLevelHP: 100
+    newLevelDmg: 25
+  currentXPCount: 0
 --- !u!114 &728529201
 MonoBehaviour:
   m_ObjectHideFlags: 0
