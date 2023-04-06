@@ -9,7 +9,6 @@ public class GameManagerScript : MonoBehaviour {
     public GameObject mazeSpawner;
     public GameObject mazeSpawnerPrefab;
     public string endGameLoadText;
-    public Sprite endGameLoadImage;
     public PlayerLevel currentPlayerLevel;
     public int currentXPCount;
 

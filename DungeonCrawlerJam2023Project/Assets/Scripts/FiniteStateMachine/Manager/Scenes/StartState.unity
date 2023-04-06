@@ -890,7 +890,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 7, y: 61}
+  m_AnchoredPosition: {x: 7, y: 188}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &271486730
@@ -976,7 +976,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -195.03296, y: 0, z: -177.7489, w: -126.963486}
+  m_margin: {x: -824.8968, y: -205.46893, z: -809.3579, w: -585.1554}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1508,7 +1508,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &535264577
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1524,7 +1524,6 @@ RectTransform:
   - {fileID: 477911906}
   - {fileID: 1926565133}
   - {fileID: 1050296322}
-  - {fileID: 943382441}
   m_Father: {fileID: 1034471212}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1893,70 +1892,66 @@ MonoBehaviour:
     levelZ: 0
     filePath: 
     levelLoadText: 
-    loadScreenImage: {fileID: 0}
   levels:
   - levelX: 15
     levelZ: 15
     filePath: Assets/LevelFiles/Level1.txt
     levelLoadText: 'You have woken up in a dungeon in the South Western Kingdoms.
       You know not why you are here, only that those kept there tend not to make
-      it out alive, or last long. You see a jet black Greatsword calling out to you.
-      You would normally be skeptical about a sword whispering to you, but you disregard
-      the whisperings: You need a fighting chance, and now you have one.'
-    loadScreenImage: {fileID: 0}
+      it out alive, or last long. You see a jet black greatsword sitting right in
+      front of you, but you hear sinister whisperings closeby as if the voices are
+      emanating from the sword itself. You would normally be skeptical about a sword
+      whispering to you, but you disregard the whisperings: You need a fighting chance,
+      and now you have one.'
   - levelX: 10
     levelZ: 20
     filePath: Assets/LevelFiles/Level2.txt
     levelLoadText: 'As soon as you exit from the first floor of the dungeon, you
       feel yourself become stronger and stronger with each life taken by the sword.
       With the increased strength comes improved memories: You start to remember
-      that you were once a noble adventurer. And now you are getting out of a dungeon
-      riddled with monsters.'
-    loadScreenImage: {fileID: 0}
+      that you were once a noble adventurer, tasked with fighting monsters and protecting
+      the innocent. Now you are getting out of a dungeon riddled with monsters similiar
+      to those you once fought against.'
   - levelX: 20
     levelZ: 20
     filePath: Assets/LevelFiles/Level3.txt
     levelLoadText: 'Once you exit the second floor, more memories flash back to you:
-      You were sent to this dungeon by the king of this land. "Sentenced to this
+      You were sent to this dungeon by the king of this land.   "Sentenced to this
       dungeon, I deem you!" He exclaims. "If madness does not get you, the many monsters
       in the dungeon most certainly will!" The taunting exclaimations of the king
-      as he passes his sentence fills your soul with both anger and concern. A King
-      who knowingly sentences criminals to a dungeon filled with monsters must be
-      very inhumane indeed.'
-    loadScreenImage: {fileID: 0}
+      as he passes his sentence fills your soul with both anger and concern.   A
+      King who knowingly sentences criminals to a dungeon filled with monsters must
+      be very inhumane indeed.'
   - levelX: 12
     levelZ: 11
     filePath: Assets/LevelFiles/Level4.txt
     levelLoadText: 'Once you exit the third floor,  you remember when you first came
       across the sword: You knew a mad Dwarf surrounded by slaves calling out to
-      you as you took the sword from the pedestal of a temple.: "You cannot take
+      you as you took the sword from the pedestal of a temple.   "You cannot take
       the sword!" He calls out. "You will ruin everything!". When you hear those
       words, the flashback ends, and you remember no more, satisfied that you taking
       this sword has thwarted an evil plan.'
-    loadScreenImage: {fileID: 0}
   - levelX: 19
     levelZ: 12
     filePath: Assets/LevelFiles/Level5.txt
     levelLoadText: 'As you make your way out of the fourth floor, you remember the
       inscription on the pedestal as you pick up the blade: "Here rests the cursed
-      blade. May it never see another soul devoured." You hear the Dwarf''s continued
+      blade. May it never see another soul devoured."   You hear the Dwarf''s continued
       exclamation, before you see your past self hold the Dwarf up by the neck as
-      you ram the sword through his heart, shutting him up for good. You cannot describe
-      how you felt back then, but "noble" is not the word you would use to describe
-      the disturbing satisfaction that you felt from watching his blood coat the
-      blade, and feeling his body gain a greater lifelessness as if his soul were
-      ripped from his body.'
-    loadScreenImage: {fileID: 0}
+      you ram the sword through his heart, shutting him up for good.   You cannot
+      describe how you felt back then, but "noble" is not the word you would use
+      to describe the disturbing satisfaction that you felt from watching his blood
+      coat the blade, and feeling his body gain a greater lifelessness as if his
+      soul were ripped from his body.'
   - levelX: 17
     levelZ: 15
     filePath: Assets/LevelFiles/Level6.txt
     levelLoadText: 'As you make your way to the final floor of the dungeon, you see
-      a lone warrior standing in the middle of an open area. He is all who stands
+      a lone warrior standing in the middle of an open area.   He is all who stands
       between you and the exit. He yells out to you as he finally notices you: "So,
       you have made it? Good. I was starting to get lonely. Your corpse shall make
       for nice company!" He gets out his greatsword and charges at you, ready to
       stop you from making your way out.'
-    loadScreenImage: {fileID: 0}
   mazeObjects:
   - associatedKey: 87
     objectToSpawn: {fileID: 6749470096195591996, guid: 6da5cdaab641d6843b5c69a65f0f73a9, type: 3}
@@ -1968,22 +1963,23 @@ MonoBehaviour:
     objectToSpawn: {fileID: 5205440647973694896, guid: a1c0bf494c1e69349af7aad49182f0a9, type: 3}
   - associatedKey: 67
     objectToSpawn: {fileID: 8692320626851713345, guid: 9be570274da914d43860d6053f68ae9d, type: 3}
+  - associatedKey: 66
+    objectToSpawn: {fileID: 8692320626851713345, guid: 9be570274da914d43860d6053f68ae9d, type: 3}
   mazeSpawner: {fileID: 0}
   mazeSpawnerPrefab: {fileID: 4008347367771799831, guid: ff3e3820461645844aca5ee77f37f77a, type: 3}
   endGameLoadText: 'You have made it out of the dungeon. As you finally leave, and
     take a glance at the setting sun, you realise: This was the first time you ever
-    saw the sun in a thousand years. You then start to remember more of the King
+    saw the sun in a thousand years.   You then start to remember more of the King
     sentencing you: "For your crimes of not only wiping out an entire Dwarfkeep and
     harming relations between the South-Western Kingdoms and the Dwarfen Jarldom,
     you have done so with the blade of Soulcleaver: The sapping of their souls has
     condemned the souls to an eternity of damnation. And for that, sentenced to this
     dungeon, I deem you!" He exclaims. The king was never inhumane: He just did what
     was necessary to protect the world; The Dwarf was never mad, only one of your
-    many slaves, and the first casualty of your rampage. And you: You were never
+    many slaves, and the first casualty of your rampage.   And you: You were never
     a noble adventurer. You were a monster in human form, the latest wielder of Soulcleaver.
     And now that you are free from the dungeon, you are free to rampage through the
-    land. After all, SOULCLEAVER HUNGERS!'
-  endGameLoadImage: {fileID: 0}
+    land.   After all, SOULCLEAVER HUNGERS!'
   currentPlayerLevel:
     levelNumber: 1
     xpToReachLevel: 0
@@ -2239,10 +2235,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
+  m_fontSize: 72
   m_fontSizeBase: 24
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -2288,82 +2284,6 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 805954609}
-  m_CullTransparentMesh: 1
---- !u!1 &943382440
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 943382441}
-  - component: {fileID: 943382443}
-  - component: {fileID: 943382442}
-  m_Layer: 0
-  m_Name: Image
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &943382441
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 943382440}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 535264577}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 140}
-  m_SizeDelta: {x: 500, y: 200}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &943382442
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 943382440}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &943382443
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 943382440}
   m_CullTransparentMesh: 1
 --- !u!1 &953228237
 GameObject:
@@ -2803,8 +2723,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 50}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 0, y: 78}
+  m_SizeDelta: {x: 380, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1050296323
 MonoBehaviour:
@@ -4400,8 +4320,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -87.5}
-  m_SizeDelta: {x: -50, y: -325}
+  m_AnchoredPosition: {x: 0, y: 50}
+  m_SizeDelta: {x: -50, y: -200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1926565134
 MonoBehaviour:
@@ -4460,7 +4380,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1936863386
 RectTransform:
   m_ObjectHideFlags: 0
