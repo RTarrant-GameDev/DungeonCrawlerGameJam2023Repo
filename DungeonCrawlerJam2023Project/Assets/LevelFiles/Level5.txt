@@ -5,9 +5,9 @@ W.W..E.......WW..W
 W.WWWWW.WWWWWW...W
 W.W....EW........W
 W.W.WWWWWWWWWWWW.W
-W.W....WE........W
+W.W...CWE........W
 W.WWWWWWWWWWWW...W
 W.W...E..........W
 W.W.WWWWWW.WW.WW.W
-W.....EW....W..W.W
+W.....EW...CW.CWCW
 WWWWWWWWWWWWWWWWWW

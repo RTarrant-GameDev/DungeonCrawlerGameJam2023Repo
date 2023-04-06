@@ -7,7 +7,10 @@ public class EnemyHealth : MonoBehaviour {
     public int maxHP;
 
     void Start() {
-        maxHP = GameManagerScript.Instance.currentPlayerLevel.newLevelHP;
+        if(this.gameObject.tag == "Enemy") { //only scale enemy HP with player
+            maxHP = GameManagerScript.Instance.currentPlayerLevel.newLevelHP;
+        }
+        
         currHP = maxHP;
     }
 
