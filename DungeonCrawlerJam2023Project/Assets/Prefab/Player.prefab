@@ -365,6 +365,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dmgNumber: 0
+  cooldownTime: 2.5
 --- !u!54 &5386994031790862656
 Rigidbody:
   m_ObjectHideFlags: 0
