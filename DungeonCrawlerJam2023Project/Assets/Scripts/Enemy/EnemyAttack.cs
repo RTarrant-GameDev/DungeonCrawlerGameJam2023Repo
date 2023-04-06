@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyAttack : MonoBehaviour {
+    public int attackDmg;
     public Transform player;
     public float attackRange = 1.0f;
     public float attackCooldown = 2.5f;
@@ -36,7 +37,11 @@ public class EnemyAttack : MonoBehaviour {
     }
 
     void Attack() {
-        player.gameObject.GetComponent<PlayerHealth>().SubtractHP(Mathf.RoundToInt(player.gameObject.GetComponent<PlayerHealth>().maxHealth * .15f)); //chip off 15% of player's health for each attack
+        if(this.gameObject.tag == "Enemy") {
+            player.gameObject.GetComponent<PlayerHealth>().SubtractHP(Mathf.RoundToInt(player.gameObject.GetComponent<PlayerHealth>().maxHealth * .15f)); //chip off 15% of player's health for each attack
+        } else {
+            player.gameObject.GetComponent<PlayerHealth>().SubtractHP(attackDmg);
+        }
         lastAttackTime = Time.time;
     }
 }

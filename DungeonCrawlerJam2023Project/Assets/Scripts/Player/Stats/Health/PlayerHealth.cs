@@ -22,7 +22,9 @@ public class PlayerHealth : MonoBehaviour {
         if (currHealth > 0) {
             currHealth -= hpToSubtract;
         } else {
-            //Game Over Condition
+            GameManagerScript.Instance.SavePlayerData();
+            StateManager.InstanceRef.SwitchState(new StartState(StateManager.InstanceRef)); 
+            StateManager.InstanceRef.GameState = gameState.GameOver;
         }
     }
 
