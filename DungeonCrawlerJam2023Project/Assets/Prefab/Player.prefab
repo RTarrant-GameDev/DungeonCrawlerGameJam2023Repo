@@ -196,7 +196,7 @@ GameObject:
   - component: {fileID: -4116223178580155573}
   - component: {fileID: -892480430377074131}
   - component: {fileID: 5386994031790862656}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -308,10 +308,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentLevel:
-    levelNumber: 6
-    xpToReachLevel: 4500
-    newLevelHP: 500
-    newLevelDmg: 130
+    levelNumber: 1
+    xpToReachLevel: 0
+    newLevelHP: 100
+    newLevelDmg: 20
   levels:
   - levelNumber: 1
     xpToReachLevel: 0
@@ -337,7 +337,7 @@ MonoBehaviour:
     xpToReachLevel: 5000
     newLevelHP: 500
     newLevelDmg: 130
-  currXP: 700
+  currXP: 0
 --- !u!114 &-4116223178580155573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -350,7 +350,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b5bdb062e06c254eaa8593dd2d841db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 500
+  maxHealth: 100
   currHealth: 0
 --- !u!114 &-892480430377074131
 MonoBehaviour:
