@@ -50,7 +50,7 @@ public class PlayerInput : MonoBehaviour {
     }
 
     public void CurrentClickedGameObject (GameObject gameObject) {
-        if (gameObject.name == "Enemy(Clone)") {
+        if (gameObject.tag == "Enemy" && Vector3.Distance(gameObject.transform.position, this.gameObject.transform.position) <= 1.5f) {
             this.gameObject.GetComponent<PlayerAttack>().AttackEnemy(gameObject);
         }
     }

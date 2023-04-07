@@ -11,6 +11,16 @@ public class PlayerHealth : MonoBehaviour {
         currHealth = maxHealth;
     }
 
+    void Update() {
+        if(this.currHealth <= 0) {
+            GameManagerScript.Instance.SavePlayerData();
+            StateManager.InstanceRef.SwitchState(new StartState(StateManager.InstanceRef)); 
+            StateManager.InstanceRef.GameState = gameState.GameOver;
+        } else if (currHealth >= maxHealth) {
+            currHealth = maxHealth;
+        }
+    }
+
     // Update is called once per frame
     public void AddHP(int hpToAdd) {
         if(currHealth < maxHealth) {
@@ -21,10 +31,6 @@ public class PlayerHealth : MonoBehaviour {
     public void SubtractHP(int hpToSubtract) {
         if (currHealth > 0) {
             currHealth -= hpToSubtract;
-        } else {
-            GameManagerScript.Instance.SavePlayerData();
-            StateManager.InstanceRef.SwitchState(new StartState(StateManager.InstanceRef)); 
-            StateManager.InstanceRef.GameState = gameState.GameOver;
         }
     }
 

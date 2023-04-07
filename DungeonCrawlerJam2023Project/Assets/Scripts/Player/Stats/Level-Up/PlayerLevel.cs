@@ -8,4 +8,5 @@ public struct PlayerLevel {
     public int xpToReachLevel;
     public int newLevelHP;
     public int newLevelDmg;
+    public Sprite levelMeterCustomSprite;
 }

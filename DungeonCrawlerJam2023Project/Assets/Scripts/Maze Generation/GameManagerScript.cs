@@ -20,6 +20,9 @@ public class GameManagerScript : MonoBehaviour {
         } else {
             Destroy(gameObject);
         }
+
+        QualitySettings.vSyncCount = 0;
+        Application.targetFrameRate = 60;
     }
 
     public void NextLevel() {
@@ -75,7 +78,6 @@ public class GameManagerScript : MonoBehaviour {
         foreach(MazeObject mObjs in mazeObjects) {
             if(mObjs.associatedKey == foundCharacter) {
                 if(mObjs.objectToSpawn.name == "Player") {
-                    Debug.Log("Player should be getting values from GameManager");
                     mObjs.objectToSpawn.GetComponent<PlayerLevelScript>().setLevelValuesFromSave(currentPlayerLevel.levelNumber, currentXPCount);
                 }
                 Instantiate(mObjs.objectToSpawn, new Vector3(posX, 1.0f, posZ), mObjs.objectToSpawn.transform.rotation).transform.parent = mazeSpawner.transform;

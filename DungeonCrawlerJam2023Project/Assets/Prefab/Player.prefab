@@ -196,6 +196,7 @@ GameObject:
   - component: {fileID: -4116223178580155573}
   - component: {fileID: -892480430377074131}
   - component: {fileID: 5386994031790862656}
+  - component: {fileID: -4763569730641430055}
   m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
@@ -312,36 +313,46 @@ MonoBehaviour:
     xpToReachLevel: 0
     newLevelHP: 100
     newLevelDmg: 20
+    levelMeterCustomSprite: {fileID: 0}
   levels:
   - levelNumber: 1
     xpToReachLevel: 0
     newLevelHP: 100
     newLevelDmg: 20
+    levelMeterCustomSprite: {fileID: 21300000, guid: 6691cbcc28c44e04ab5daf3f00751351, type: 3}
   - levelNumber: 2
     xpToReachLevel: 1000
     newLevelHP: 150
     newLevelDmg: 30
+    levelMeterCustomSprite: {fileID: 21300000, guid: 29030a4f05122404c94a24e12e405b73, type: 3}
   - levelNumber: 3
     xpToReachLevel: 1500
     newLevelHP: 200
     newLevelDmg: 40
+    levelMeterCustomSprite: {fileID: 21300000, guid: 29030a4f05122404c94a24e12e405b73, type: 3}
   - levelNumber: 4
     xpToReachLevel: 2500
     newLevelHP: 300
     newLevelDmg: 60
+    levelMeterCustomSprite: {fileID: 21300000, guid: 7a88d0f05edd26d42915cfb6ff8013bb, type: 3}
   - levelNumber: 5
     xpToReachLevel: 3000
     newLevelHP: 420
     newLevelDmg: 90
+    levelMeterCustomSprite: {fileID: 21300000, guid: 5f96d6067c1e3a244ae439d35e7b5c74, type: 3}
   - levelNumber: 6
     xpToReachLevel: 5000
     newLevelHP: 500
     newLevelDmg: 130
-  - levelNumber: 6
+    levelMeterCustomSprite: {fileID: 21300000, guid: 5d1f404f2def814418953564aa74a20e, type: 3}
+  - levelNumber: 7
     xpToReachLevel: 7500
     newLevelHP: 1000
     newLevelDmg: 250
+    levelMeterCustomSprite: {fileID: 21300000, guid: d83f3427c66e14e4ca88e7e3975472bb, type: 3}
   currXP: 0
+  xpSFX: {fileID: 8300000, guid: 8b970177e9fecce40b5d3a2ad4fb5d6d, type: 3}
+  levelUpSFX: {fileID: 8300000, guid: 4c50cd52c41b1b44fae8c94e2a1d809e, type: 3}
 --- !u!114 &-4116223178580155573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -370,6 +381,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dmgNumber: 0
   cooldownTime: 2.5
+  attackSFX: {fileID: 8300000, guid: 28d495582690ed648b82e0cf77788b65, type: 3}
 --- !u!54 &5386994031790862656
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -386,3 +398,99 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!82 &-4763569730641430055
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6687633006253761627}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 8441491601339649483, guid: 5dcb1941bcaecfa468f0844146986311, type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 132
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

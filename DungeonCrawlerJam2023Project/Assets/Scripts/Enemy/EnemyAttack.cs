@@ -9,7 +9,7 @@ public class EnemyAttack : MonoBehaviour {
     public float attackCooldown = 2.5f;
     public LayerMask playerLayerMask;
     public LayerMask obstacleLayerMask;
-
+    public AudioClip attackSFX;
     private float lastAttackTime = 0.0f;
     private bool playerInRange = false;
 
@@ -37,11 +37,13 @@ public class EnemyAttack : MonoBehaviour {
     }
 
     void Attack() {
+        this.gameObject.GetComponent<AudioSource>().PlayOneShot(attackSFX);
         if(this.gameObject.tag == "Enemy") {
-            player.gameObject.GetComponent<PlayerHealth>().SubtractHP(Mathf.RoundToInt(player.gameObject.GetComponent<PlayerHealth>().maxHealth * .15f)); //chip off 15% of player's health for each attack
+            player.gameObject.GetComponent<PlayerHealth>().SubtractHP(Mathf.RoundToInt(player.gameObject.GetComponent<PlayerHealth>().maxHealth * .125f)); //chip off 12.5% of player's health for each attack
         } else {
             player.gameObject.GetComponent<PlayerHealth>().SubtractHP(attackDmg);
         }
+
         lastAttackTime = Time.time;
     }
 }
