@@ -18,8 +18,6 @@ public class PlayerAttack : MonoBehaviour {
             this.gameObject.GetComponent<AudioSource>().PlayOneShot(attackSFX);
             enemy.GetComponent<EnemyHealth>().SubtractHP(dmgNumber);
             lastAttackTime = currentTime;
-        } else {
-            Debug.Log("Currently cooling down");
         }
     }
 

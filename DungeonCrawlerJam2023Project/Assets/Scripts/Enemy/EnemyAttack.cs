@@ -37,8 +37,9 @@ public class EnemyAttack : MonoBehaviour {
     }
 
     void Attack() {
+        this.gameObject.GetComponent<AudioSource>().PlayOneShot(attackSFX);
         if(this.gameObject.tag == "Enemy") {
-            player.gameObject.GetComponent<PlayerHealth>().SubtractHP(Mathf.RoundToInt(player.gameObject.GetComponent<PlayerHealth>().maxHealth * .15f)); //chip off 15% of player's health for each attack
+            player.gameObject.GetComponent<PlayerHealth>().SubtractHP(Mathf.RoundToInt(player.gameObject.GetComponent<PlayerHealth>().maxHealth * .125f)); //chip off 12.5% of player's health for each attack
         } else {
             player.gameObject.GetComponent<PlayerHealth>().SubtractHP(attackDmg);
         }
