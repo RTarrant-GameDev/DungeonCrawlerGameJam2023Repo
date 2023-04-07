@@ -33,16 +33,20 @@ public class EnemyAttack : MonoBehaviour {
 
         if (playerInRange && Time.time - lastAttackTime >= attackCooldown){
             Attack();
+        } else if (!playerInRange) {
+            this.gameObject.GetComponentInChildren<Animation>().GetComponent<Animation>().Play("combat_idle");
         }
     }
 
     void Attack() {
-        this.gameObject.GetComponent<AudioSource>().PlayOneShot(attackSFX);
         if(this.gameObject.tag == "Enemy") {
+            this.gameObject.GetComponentInChildren<Animation>().GetComponent<Animation>().Play("attack1");
+            this.gameObject.GetComponent<AudioSource>().PlayOneShot(attackSFX);
             player.gameObject.GetComponent<PlayerHealth>().SubtractHP(Mathf.RoundToInt(player.gameObject.GetComponent<PlayerHealth>().maxHealth * .125f)); //chip off 12.5% of player's health for each attack
         } else {
             player.gameObject.GetComponent<PlayerHealth>().SubtractHP(attackDmg);
         }
+
         lastAttackTime = Time.time;
     }
 }
