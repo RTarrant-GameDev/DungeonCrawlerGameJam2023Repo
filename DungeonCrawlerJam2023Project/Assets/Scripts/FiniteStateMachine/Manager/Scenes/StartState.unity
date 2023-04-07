@@ -1967,12 +1967,12 @@ MonoBehaviour:
   currentLevel:
     levelX: 0
     levelZ: 0
-    filePath: 
+    file: {fileID: 0}
     levelLoadText: 
   levels:
   - levelX: 15
     levelZ: 15
-    filePath: Assets/LevelFiles/Level1.txt
+    file: {fileID: 4900000, guid: a2a710df7d1b9564b9f2ccb073be07d1, type: 3}
     levelLoadText: 'You have woken up in a dungeon in the South Western Kingdoms.
       You know not why you are here, only that those kept there tend not to make
       it out alive, or last long. You see a jet black greatsword sitting right in
@@ -1982,7 +1982,7 @@ MonoBehaviour:
       and now you have one.'
   - levelX: 10
     levelZ: 20
-    filePath: Assets/LevelFiles/Level2.txt
+    file: {fileID: 4900000, guid: 496aff0fa86e10e48979ddc47cb7ef70, type: 3}
     levelLoadText: 'As soon as you exit from the first floor of the dungeon, you
       feel yourself become stronger and stronger with each life taken by the sword.
       With the increased strength comes improved memories: You start to remember
@@ -1991,7 +1991,7 @@ MonoBehaviour:
       to those you once fought against.'
   - levelX: 20
     levelZ: 20
-    filePath: Assets/LevelFiles/Level3.txt
+    file: {fileID: 4900000, guid: 1a4d64835fa436b44ade9122b71affc3, type: 3}
     levelLoadText: 'Once you exit the second floor, more memories flash back to you:
       You were sent to this dungeon by the king of this land.   "Sentenced to this
       dungeon, I deem you!" He exclaims. "If madness does not get you, the many monsters
@@ -2001,7 +2001,7 @@ MonoBehaviour:
       be very inhumane indeed.'
   - levelX: 12
     levelZ: 11
-    filePath: Assets/LevelFiles/Level4.txt
+    file: {fileID: 4900000, guid: 3a33dee96c8cee7469fb0b007f95dcc8, type: 3}
     levelLoadText: 'Once you exit the third floor,  you remember when you first came
       across the sword: You knew a mad Dwarf surrounded by slaves calling out to
       you as you took the sword from the pedestal of a temple.   "You cannot take
@@ -2010,7 +2010,7 @@ MonoBehaviour:
       this sword has thwarted an evil plan.'
   - levelX: 19
     levelZ: 12
-    filePath: Assets/LevelFiles/Level5.txt
+    file: {fileID: 4900000, guid: 5d081b73d0c62aa439abc41e63dbe03c, type: 3}
     levelLoadText: 'As you make your way out of the fourth floor, you remember the
       inscription on the pedestal as you pick up the blade: "Here rests the cursed
       blade. May it never see another soul devoured."   You hear the Dwarf''s continued
@@ -2022,7 +2022,7 @@ MonoBehaviour:
       soul were ripped from his body.'
   - levelX: 17
     levelZ: 15
-    filePath: Assets/LevelFiles/Level6.txt
+    file: {fileID: 4900000, guid: 89f2594a92ca15742a2f120290166051, type: 3}
     levelLoadText: As you make your way to the final floor of the dungeon, you see
       a lone creature standing in the middle of an open area.   The Slime King, empowered
       by dark magicks, now stands between you and your final destiny!

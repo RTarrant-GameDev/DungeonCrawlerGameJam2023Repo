@@ -6,6 +6,6 @@ using System.IO;
 [System.Serializable]
 public struct LevelObject {
     public float levelX, levelZ;
-    public string filePath;
+    public TextAsset file;
     public string levelLoadText;
 }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
 public class GameManagerScript : MonoBehaviour {
@@ -11,7 +12,6 @@ public class GameManagerScript : MonoBehaviour {
     public string endGameLoadText;
     public PlayerLevel currentPlayerLevel;
     public int currentXPCount;
-
     public static GameManagerScript Instance { get; private set; }
     void Awake(){
         if (Instance == null) {
@@ -71,7 +71,7 @@ public class GameManagerScript : MonoBehaviour {
 
     //So that function can be called when loading game
     public void GenerateLevel(LevelObject levelToGenerate) {
-        this.gameObject.GetComponent<FileReader>().ReadFile(levelToGenerate.filePath);
+        this.gameObject.GetComponent<FileReader>().ReadFile(levelToGenerate.file);
     }
 
     public void PlaceObject(char foundCharacter, float posX, float posZ) {

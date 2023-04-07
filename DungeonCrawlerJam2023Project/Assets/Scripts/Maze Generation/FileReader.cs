@@ -4,8 +4,8 @@ using System.IO;
 using UnityEngine;
 
 public class FileReader : MonoBehaviour {
-    public void ReadFile(string filePath) {
-        string text = File.ReadAllText(filePath);
+    public void ReadFile(TextAsset file) {
+        string text = file.text;
 
         int row = 0;
         int col = 0;
