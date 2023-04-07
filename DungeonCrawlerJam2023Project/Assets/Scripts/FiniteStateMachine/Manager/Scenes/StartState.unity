@@ -1962,7 +1962,7 @@ MonoBehaviour:
   - associatedKey: 88
     objectToSpawn: {fileID: 8489804989553642005, guid: afc5d022c4043a1418ac574c791932f1, type: 3}
   - associatedKey: 69
-    objectToSpawn: {fileID: 5205440647973694896, guid: a1c0bf494c1e69349af7aad49182f0a9, type: 3}
+    objectToSpawn: {fileID: 7842753828577402015, guid: 8884f2be3ffd7944c9e74d79529e673f, type: 3}
   - associatedKey: 67
     objectToSpawn: {fileID: 8692320626851713345, guid: 9be570274da914d43860d6053f68ae9d, type: 3}
   - associatedKey: 66
