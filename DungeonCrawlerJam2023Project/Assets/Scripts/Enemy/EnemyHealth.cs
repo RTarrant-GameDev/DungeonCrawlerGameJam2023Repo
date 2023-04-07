@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour {
     public int currHP;
     public int maxHP;
+    public int enemyXP;
 
     void Start() {
         if(this.gameObject.tag == "Enemy") { //only scale enemy HP with player
@@ -18,8 +19,12 @@ public class EnemyHealth : MonoBehaviour {
         if(currHP > 0){
             currHP-= hpToSubtract;
         } else {
-            GameObject.Find("Player(Clone)").GetComponent<PlayerLevelScript>().AddXP(
+            if(this.gameObject.tag == "Enemy") {
+                GameObject.Find("Player(Clone)").GetComponent<PlayerLevelScript>().AddXP(
                 (200*GameObject.Find("Player(Clone)").GetComponent<PlayerLevelScript>().currentLevel.levelNumber));
+            } else if(this.gameObject.tag == "Boss") {
+                GameObject.Find("Player(Clone)").GetComponent<PlayerLevelScript>().AddXP(enemyXP);
+            }
             Destroy(this.gameObject);
         }
     }
