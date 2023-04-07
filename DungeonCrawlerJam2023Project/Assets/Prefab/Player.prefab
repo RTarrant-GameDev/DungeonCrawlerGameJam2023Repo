@@ -337,6 +337,10 @@ MonoBehaviour:
     xpToReachLevel: 5000
     newLevelHP: 500
     newLevelDmg: 130
+  - levelNumber: 6
+    xpToReachLevel: 7500
+    newLevelHP: 1000
+    newLevelDmg: 250
   currXP: 0
 --- !u!114 &-4116223178580155573
 MonoBehaviour:

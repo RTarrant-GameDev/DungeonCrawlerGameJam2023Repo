@@ -1508,7 +1508,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &535264577
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1964,7 +1964,7 @@ MonoBehaviour:
   - associatedKey: 67
     objectToSpawn: {fileID: 8692320626851713345, guid: 9be570274da914d43860d6053f68ae9d, type: 3}
   - associatedKey: 66
-    objectToSpawn: {fileID: 8692320626851713345, guid: 9be570274da914d43860d6053f68ae9d, type: 3}
+    objectToSpawn: {fileID: 3686935092385065964, guid: 556c84ceaf34d844698b07f5ee6d3186, type: 3}
   mazeSpawner: {fileID: 0}
   mazeSpawnerPrefab: {fileID: 4008347367771799831, guid: ff3e3820461645844aca5ee77f37f77a, type: 3}
   endGameLoadText: 'You have made it out of the dungeon. As you finally leave, and
@@ -2530,7 +2530,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -100}
+  m_AnchoredPosition: {x: 0, y: -251}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &969757826
