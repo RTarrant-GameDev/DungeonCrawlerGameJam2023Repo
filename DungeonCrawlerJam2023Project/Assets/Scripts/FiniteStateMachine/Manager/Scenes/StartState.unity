@@ -1948,12 +1948,9 @@ MonoBehaviour:
   - levelX: 17
     levelZ: 15
     filePath: Assets/LevelFiles/Level6.txt
-    levelLoadText: 'As you make your way to the final floor of the dungeon, you see
-      a lone warrior standing in the middle of an open area.   He is all who stands
-      between you and the exit. He yells out to you as he finally notices you: "So,
-      you have made it? Good. I was starting to get lonely. Your corpse shall make
-      for nice company!" He gets out his greatsword and charges at you, ready to
-      stop you from making your way out.'
+    levelLoadText: As you make your way to the final floor of the dungeon, you see
+      a lone creature standing in the middle of an open area.   The Slime King now
+      stands between you and your final destiny!
   mazeObjects:
   - associatedKey: 87
     objectToSpawn: {fileID: 6749470096195591996, guid: 6da5cdaab641d6843b5c69a65f0f73a9, type: 3}
