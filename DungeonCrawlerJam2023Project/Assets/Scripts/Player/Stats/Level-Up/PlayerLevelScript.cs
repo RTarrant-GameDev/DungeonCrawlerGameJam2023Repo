@@ -6,6 +6,8 @@ public class PlayerLevelScript : MonoBehaviour {
     public PlayerLevel currentLevel;
     public PlayerLevel[] levels;
     public int currXP;
+    public AudioClip xpSFX;
+    public AudioClip levelUpSFX;
 
     // Update is called once per frame
     void Update() {
@@ -17,6 +19,7 @@ public class PlayerLevelScript : MonoBehaviour {
     public void AddXP(int xpToAdd) {
         if(currentLevel.levelNumber < levels.Length) {
             currXP += xpToAdd;
+            this.gameObject.GetComponent<AudioSource>().PlayOneShot(xpSFX);
         }
     }
 
@@ -28,6 +31,7 @@ public class PlayerLevelScript : MonoBehaviour {
     
     void levelUp(int levelNumber) {
         currentLevel = levels[levelNumber];
+        this.gameObject.GetComponent<AudioSource>().PlayOneShot(levelUpSFX);
         currXP -= currentLevel.xpToReachLevel;
         this.gameObject.GetComponent<PlayerHealth>().SetHealthPostLevelUp(currentLevel.newLevelHP);
         //set damage here

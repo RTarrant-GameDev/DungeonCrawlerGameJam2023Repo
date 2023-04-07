@@ -9,7 +9,7 @@ public class EnemyAttack : MonoBehaviour {
     public float attackCooldown = 2.5f;
     public LayerMask playerLayerMask;
     public LayerMask obstacleLayerMask;
-
+    public AudioClip attackSFX;
     private float lastAttackTime = 0.0f;
     private bool playerInRange = false;
 

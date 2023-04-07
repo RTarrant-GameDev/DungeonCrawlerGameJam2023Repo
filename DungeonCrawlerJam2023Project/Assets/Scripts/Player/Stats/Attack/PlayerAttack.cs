@@ -6,7 +6,7 @@ public class PlayerAttack : MonoBehaviour {
     public int dmgNumber;
     public float cooldownTime;
     private float lastAttackTime;
-    
+    public AudioClip attackSFX;
 
     void Start() {
         dmgNumber = this.gameObject.GetComponent<PlayerLevelScript>().currentLevel.newLevelDmg;
@@ -15,6 +15,7 @@ public class PlayerAttack : MonoBehaviour {
     public void AttackEnemy(GameObject enemy) {
         float currentTime = Time.time;
         if(CooldownProgress() >= cooldownTime) {
+            this.gameObject.GetComponent<AudioSource>().PlayOneShot(attackSFX);
             enemy.GetComponent<EnemyHealth>().SubtractHP(dmgNumber);
             lastAttackTime = currentTime;
         } else {
