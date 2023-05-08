@@ -88,7 +88,7 @@ MonoBehaviour:
   obstacleLayerMask:
     serializedVersion: 2
     m_Bits: 64
-  attackSFX: {fileID: 0}
+  attackSFX: {fileID: 8300000, guid: 4750c70ffaf21f345a73506b003e8a11, type: 3}
 --- !u!82 &-3716042307550868947
 AudioSource:
   m_ObjectHideFlags: 0
