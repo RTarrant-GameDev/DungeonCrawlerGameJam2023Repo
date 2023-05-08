@@ -22,16 +22,12 @@ public class PlayerInput : MonoBehaviour {
     }
 
     void Update() {
-        if(Input.GetKeyUp(moveForward) && collisionDetection.canMoveForward) controller.MoveFoward();
-        if(Input.GetKeyUp(moveBackward) && collisionDetection.canMoveBackward) controller.MoveBackward();
-        if(Input.GetKeyUp(moveLeft) && collisionDetection.canMoveLeft) controller.MoveLeft();
-        if(Input.GetKeyUp(moveRight) && collisionDetection.canMoveRight) controller.MoveRight();
-        if(Input.GetKeyUp(rotateLeft)) controller.RotateLeft();
-        if(Input.GetKeyUp(rotateRight)) controller.RotateRight();
-
-        if(Input.GetKeyDown(KeyCode.L)) {
-            this.gameObject.GetComponent<PlayerLevelScript>().AddXP(450);
-        }
+        if(Input.GetKeyDown(moveForward) && collisionDetection.canMoveForward) controller.MoveFoward();
+        if(Input.GetKeyDown(moveBackward) && collisionDetection.canMoveBackward) controller.MoveBackward();
+        if(Input.GetKeyDown(moveLeft) && collisionDetection.canMoveLeft) controller.MoveLeft();
+        if(Input.GetKeyDown(moveRight) && collisionDetection.canMoveRight) controller.MoveRight();
+        if(Input.GetKeyDown(rotateLeft)) controller.RotateLeft();
+        if(Input.GetKeyDown(rotateRight)) controller.RotateRight();
 
         if(Input.GetMouseButtonDown(0)) { 
             RaycastHit raycastHit;
