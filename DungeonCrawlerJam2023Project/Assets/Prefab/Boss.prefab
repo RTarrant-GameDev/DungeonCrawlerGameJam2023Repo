@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -3716042307550868947}
   m_Layer: 0
   m_Name: Boss
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -88,7 +88,7 @@ MonoBehaviour:
   obstacleLayerMask:
     serializedVersion: 2
     m_Bits: 64
-  attackSFX: {fileID: 0}
+  attackSFX: {fileID: 8300000, guid: 4750c70ffaf21f345a73506b003e8a11, type: 3}
 --- !u!82 &-3716042307550868947
 AudioSource:
   m_ObjectHideFlags: 0
