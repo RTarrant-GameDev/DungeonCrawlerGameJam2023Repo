@@ -29,25 +29,8 @@ public class PlayerInput : MonoBehaviour {
         if(Input.GetKeyDown(rotateLeft)) controller.RotateLeft();
         if(Input.GetKeyDown(rotateRight)) controller.RotateRight();
 
-        if(Input.GetMouseButtonDown(0)) { 
-            RaycastHit raycastHit;
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-            if (Physics.Raycast(ray, out raycastHit, 100f)) {
-                if(raycastHit.transform != null) {
-                    CurrentClickedGameObject(raycastHit.transform.gameObject);
-                }
-            }
-        }
-
         if(Input.GetKeyDown(KeyCode.Escape)) {
             StateManager.InstanceRef.GameState = gameState.Pause;
-        }
-    }
-
-    public void CurrentClickedGameObject (GameObject gameObject) {
-        if (gameObject.tag == "Enemy" && Vector3.Distance(gameObject.transform.position, this.gameObject.transform.position) <= 1.5f) {
-            this.gameObject.GetComponent<PlayerAttack>().AttackEnemy(gameObject);
         }
     }
 }
