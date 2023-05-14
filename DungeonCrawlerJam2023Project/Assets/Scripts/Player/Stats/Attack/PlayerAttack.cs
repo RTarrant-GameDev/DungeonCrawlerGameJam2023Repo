@@ -12,6 +12,26 @@ public class PlayerAttack : MonoBehaviour {
         dmgNumber = this.gameObject.GetComponent<PlayerLevelScript>().currentLevel.newLevelDmg;
     }
 
+    public void AttackCheck() {
+        RaycastHit raycastHit;
+        Ray ray = new Ray(this.gameObject.transform.position, this.gameObject.transform.forward);
+        Debug.DrawRay(ray.origin, ray.direction * 0.2f, Color.black);
+
+        if (Physics.Raycast(ray, out raycastHit, 100f)) {
+            if(raycastHit.transform != null) {
+                CurrentClickedGameObject(raycastHit.transform.gameObject);
+            }
+        }
+    }
+
+    void CurrentClickedGameObject (GameObject gameObject) {
+        if (gameObject.tag == "Enemy" && Vector3.Distance(gameObject.transform.position, this.gameObject.transform.position) <= 1.5f) {
+            AttackEnemy(gameObject);
+        } else {
+            Debug.Log("Cannot attack because player is not looking at enemy");
+        }
+    }
+
     public void AttackEnemy(GameObject enemy) {
         float currentTime = Time.time;
         if(CooldownProgress() >= cooldownTime) {

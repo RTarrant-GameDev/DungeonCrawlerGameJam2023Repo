@@ -28,11 +28,6 @@ public class WallCollisionDetection : MonoBehaviour {
         rayRight = new Ray(currDirection, transform.right);
         rayForward = new Ray(currDirection, transform.forward);
         rayBackward = new Ray(currDirection, -transform.forward);
-
-        Debug.DrawRay(rayLeft.origin, rayLeft.direction*2.0f, Color.black);
-        Debug.DrawRay(rayForward.origin, rayForward.direction*2.0f, Color.black);
-        Debug.DrawRay(rayRight.origin, rayRight.direction*2.0f, Color.black);
-        Debug.DrawRay(rayBackward.origin, rayBackward.direction*2.0f, Color.black);
     }
 
     void Update() {
