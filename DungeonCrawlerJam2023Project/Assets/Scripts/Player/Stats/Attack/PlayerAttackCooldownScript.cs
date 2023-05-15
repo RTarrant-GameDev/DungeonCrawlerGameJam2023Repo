@@ -9,8 +9,10 @@ public class PlayerAttackCooldownScript : MonoBehaviour {
     void Update() {
         if(cooldownMeter.value == cooldownMeter.maxValue) {
             cooldownMeter.gameObject.SetActive(false);
+            GameObject.Find("attackButton").GetComponent<Button>().interactable = true;
         } else {
             cooldownMeter.gameObject.SetActive(true);
+            GameObject.Find("attackButton").GetComponent<Button>().interactable = false;
         }
         cooldownMeter.maxValue = GameObject.Find("Player(Clone)").GetComponent<PlayerAttack>().cooldownTime;
         cooldownMeter.value = GameObject.Find("Player(Clone)").GetComponent<PlayerAttack>().CooldownProgress();
