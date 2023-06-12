@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 402e9826751e87f45a671dc4beb9ddb1
+guid: d494a9610856e414e92cdbed67e34750
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -7,22 +7,82 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material.001
-    second: {fileID: 2100000, guid: 0783e4aab160efa4c9a8902977b551a9, type: 2}
+      name: BladeMaterialLevel1
+    second: {fileID: 2100000, guid: 4029ddf856db48a4495410bb28b0fa9e, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material.002
-    second: {fileID: 2100000, guid: 491039cee2f106544a1c1901cac87fb2, type: 2}
+      name: BladeMaterialLevel2
+    second: {fileID: 2100000, guid: 49792b41fcff84b4f95d7d6dc79cacc4, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material.003
-    second: {fileID: 2100000, guid: c21333182fe05ba43a47cace57ecf168, type: 2}
+      name: BladeMaterialLevel3
+    second: {fileID: 2100000, guid: ffec98788648fac4fb24ba2667c41ef6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BladeMaterialLevel4
+    second: {fileID: 2100000, guid: 44f359d3112d9cd488e42682857e9822, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BladeMaterialLevel5
+    second: {fileID: 2100000, guid: 23c6fd4da856fc74d9b2586ed3e7c393, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CrossguardMaterialLevel1
+    second: {fileID: 2100000, guid: 50cbd587f251ec848829ec1db4750193, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CrossguardMaterialLevel2
+    second: {fileID: 2100000, guid: c9279bd81c9efbb49a777fa13602de9d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CrossguardMaterialLevel3
+    second: {fileID: 2100000, guid: 86d82ad48875bcc48aeb6906695ae5ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CrossguardMaterialLevel4
+    second: {fileID: 2100000, guid: 906596f0e6ec05c43b7ef0ce8cb117e9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CrossguardMaterialLevel5
+    second: {fileID: 2100000, guid: 9a07bce9fdc20cb4f839c225174c0e29, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: HiltMaterialLevel1
+    second: {fileID: 2100000, guid: d602859ffe5c51c449af2abc95a51b40, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: HiltMaterialLevel2
+    second: {fileID: 2100000, guid: 166edc095ca8a434d8e0ce2c733ea5be, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: HiltMaterialLevel3
+    second: {fileID: 2100000, guid: cab50db8419145f46a8ff1985f7eeb62, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: HiltMaterialLevel4
+    second: {fileID: 2100000, guid: 3b910c2f43b76c64ea143921ae40fb37, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: HiltMaterialLevel5
+    second: {fileID: 2100000, guid: f25510d26a382514193bc6cdc117b33f, type: 2}
   materials:
     materialImportMode: 2
-    materialName: 1
-    materialSearch: 0
+    materialName: 0
+    materialSearch: 1
     materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
@@ -53,7 +113,7 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
-    useSRGBMaterialColor: 1
+    useSRGBMaterialColor: 0
     sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
