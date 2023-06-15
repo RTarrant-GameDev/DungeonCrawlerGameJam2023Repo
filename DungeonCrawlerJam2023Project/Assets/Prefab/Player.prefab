@@ -213,7 +213,7 @@ Transform:
   m_GameObject: {fileID: 6687633006253761627}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4758882541989681733}
@@ -315,42 +315,50 @@ MonoBehaviour:
     newLevelHP: 100
     newLevelDmg: 20
     levelMeterCustomSprite: {fileID: 0}
+    swordMaterial: {fileID: 0}
   levels:
   - levelNumber: 1
     xpToReachLevel: 0
     newLevelHP: 100
     newLevelDmg: 20
     levelMeterCustomSprite: {fileID: 21300000, guid: 6691cbcc28c44e04ab5daf3f00751351, type: 3}
+    swordMaterial: {fileID: 2100000, guid: 4029ddf856db48a4495410bb28b0fa9e, type: 2}
   - levelNumber: 2
     xpToReachLevel: 1000
     newLevelHP: 150
     newLevelDmg: 30
     levelMeterCustomSprite: {fileID: 21300000, guid: 29030a4f05122404c94a24e12e405b73, type: 3}
+    swordMaterial: {fileID: 2100000, guid: 49792b41fcff84b4f95d7d6dc79cacc4, type: 2}
   - levelNumber: 3
     xpToReachLevel: 1500
     newLevelHP: 200
     newLevelDmg: 40
     levelMeterCustomSprite: {fileID: 21300000, guid: 29030a4f05122404c94a24e12e405b73, type: 3}
+    swordMaterial: {fileID: 2100000, guid: 49792b41fcff84b4f95d7d6dc79cacc4, type: 2}
   - levelNumber: 4
     xpToReachLevel: 2500
     newLevelHP: 300
     newLevelDmg: 60
     levelMeterCustomSprite: {fileID: 21300000, guid: 7a88d0f05edd26d42915cfb6ff8013bb, type: 3}
+    swordMaterial: {fileID: 2100000, guid: ffec98788648fac4fb24ba2667c41ef6, type: 2}
   - levelNumber: 5
     xpToReachLevel: 3000
     newLevelHP: 420
     newLevelDmg: 90
     levelMeterCustomSprite: {fileID: 21300000, guid: 5f96d6067c1e3a244ae439d35e7b5c74, type: 3}
+    swordMaterial: {fileID: 2100000, guid: 44f359d3112d9cd488e42682857e9822, type: 2}
   - levelNumber: 6
     xpToReachLevel: 5000
     newLevelHP: 500
     newLevelDmg: 130
     levelMeterCustomSprite: {fileID: 21300000, guid: 5d1f404f2def814418953564aa74a20e, type: 3}
+    swordMaterial: {fileID: 2100000, guid: 23c6fd4da856fc74d9b2586ed3e7c393, type: 2}
   - levelNumber: 7
     xpToReachLevel: 7500
     newLevelHP: 1000
     newLevelDmg: 250
     levelMeterCustomSprite: {fileID: 21300000, guid: d83f3427c66e14e4ca88e7e3975472bb, type: 3}
+    swordMaterial: {fileID: 2100000, guid: 23c6fd4da856fc74d9b2586ed3e7c393, type: 2}
   currXP: 0
   xpSFX: {fileID: 8300000, guid: 8b970177e9fecce40b5d3a2ad4fb5d6d, type: 3}
   levelUpSFX: {fileID: 8300000, guid: 4c50cd52c41b1b44fae8c94e2a1d809e, type: 3}
@@ -383,6 +391,7 @@ MonoBehaviour:
   dmgNumber: 0
   cooldownTime: 2.5
   attackSFX: {fileID: 8300000, guid: 28d495582690ed648b82e0cf77788b65, type: 3}
+  swordObj: {fileID: 9107687342178673228}
 --- !u!54 &5386994031790862656
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -507,20 +516,32 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d494a9610856e414e92cdbed67e34750, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d494a9610856e414e92cdbed67e34750, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d494a9610856e414e92cdbed67e34750, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d494a9610856e414e92cdbed67e34750, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 1.66
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d494a9610856e414e92cdbed67e34750, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -1.95
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d494a9610856e414e92cdbed67e34750, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 4.32
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d494a9610856e414e92cdbed67e34750, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d494a9610856e414e92cdbed67e34750, type: 3}
       propertyPath: m_LocalRotation.x
@@ -528,7 +549,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d494a9610856e414e92cdbed67e34750, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d494a9610856e414e92cdbed67e34750, type: 3}
       propertyPath: m_LocalRotation.z
@@ -540,24 +561,57 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d494a9610856e414e92cdbed67e34750, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d494a9610856e414e92cdbed67e34750, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7334951474422550414, guid: d494a9610856e414e92cdbed67e34750, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -844464367804050527, guid: d494a9610856e414e92cdbed67e34750, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 876143298232763383, guid: d494a9610856e414e92cdbed67e34750, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d494a9610856e414e92cdbed67e34750, type: 3}
       propertyPath: m_Name
       value: playerSword
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d494a9610856e414e92cdbed67e34750, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d494a9610856e414e92cdbed67e34750, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 5636708789470549714, guid: d494a9610856e414e92cdbed67e34750, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5699382115813567197, guid: d494a9610856e414e92cdbed67e34750, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8084854973141751649, guid: d494a9610856e414e92cdbed67e34750, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 23c6fd4da856fc74d9b2586ed3e7c393, type: 2}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d494a9610856e414e92cdbed67e34750, type: 3}
 --- !u!4 &8443917036363577590 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d494a9610856e414e92cdbed67e34750, type: 3}
+  m_PrefabInstance: {fileID: 8260842738672246557}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &9107687342178673228 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d494a9610856e414e92cdbed67e34750, type: 3}
   m_PrefabInstance: {fileID: 8260842738672246557}
   m_PrefabAsset: {fileID: 0}

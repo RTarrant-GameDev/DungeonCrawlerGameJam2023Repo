@@ -7,6 +7,7 @@ public class PlayerAttack : MonoBehaviour {
     public float cooldownTime;
     private float lastAttackTime;
     public AudioClip attackSFX;
+    public GameObject swordObj;
 
     void Start() {
         dmgNumber = this.gameObject.GetComponent<PlayerLevelScript>().currentLevel.newLevelDmg;
