@@ -2195,6 +2195,7 @@ MonoBehaviour:
     newLevelHP: 100
     newLevelDmg: 25
     levelMeterCustomSprite: {fileID: 0}
+    swordMaterial: {fileID: 0}
   currentXPCount: 0
 --- !u!114 &728529201
 MonoBehaviour:
