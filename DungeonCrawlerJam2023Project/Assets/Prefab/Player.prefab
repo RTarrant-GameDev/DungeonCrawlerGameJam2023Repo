@@ -392,6 +392,8 @@ MonoBehaviour:
   cooldownTime: 2.5
   attackSFX: {fileID: 8300000, guid: 28d495582690ed648b82e0cf77788b65, type: 3}
   swordObj: {fileID: 9107687342178673228}
+  animations:
+  - {fileID: 7400000, guid: 46e7c6559787c1e4fb553697e6e06b50, type: 2}
 --- !u!54 &5386994031790862656
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -615,3 +617,24 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d494a9610856e414e92cdbed67e34750, type: 3}
   m_PrefabInstance: {fileID: 8260842738672246557}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &7700559072213981003
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9107687342178673228}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 44bfbce739eb0c941b64131a2ad1a725, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
