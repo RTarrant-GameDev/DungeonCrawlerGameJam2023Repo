@@ -38,10 +38,7 @@ public class PlayerAttack : MonoBehaviour {
     public void AttackEnemy(GameObject enemy) {
         float currentTime = Time.time;
         if(CooldownProgress() >= cooldownTime) {
-            animations[0].wrapMode = WrapMode.Once;
-            swordObj.GetComponent<Animator>().Play(animations[0].name, -1, 0f);
-            //yield return new WaitForSeconds(.3);
-            this.gameObject.GetComponent<AudioSource>().PlayOneShot(attackSFX);
+            StartCoroutine(SwordAttack());
             enemy.GetComponent<EnemyHealth>().SubtractHP(dmgNumber);
             lastAttackTime = currentTime;
         }
@@ -50,5 +47,12 @@ public class PlayerAttack : MonoBehaviour {
     public float CooldownProgress() {
         float currentTime = Time.time;
         return currentTime - lastAttackTime;
+    }
+
+    public IEnumerator SwordAttack() {
+        animations[0].wrapMode = WrapMode.Once;
+        swordObj.GetComponent<Animator>().Play(animations[0].name, -1, 0f);
+        yield return new WaitForSeconds(0.3f);
+        this.gameObject.GetComponent<AudioSource>().PlayOneShot(attackSFX);
     }
 }
