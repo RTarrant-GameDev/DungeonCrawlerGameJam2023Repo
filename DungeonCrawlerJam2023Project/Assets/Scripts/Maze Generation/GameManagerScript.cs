@@ -7,6 +7,7 @@ public class GameManagerScript : MonoBehaviour {
     public LevelObject currentLevel;
     public LevelObject[] levels;
     public MazeObject[] mazeObjects;
+    public Enemy[] enemies;
     public GameObject mazeSpawner;
     public GameObject mazeSpawnerPrefab;
     public string endGameLoadText;

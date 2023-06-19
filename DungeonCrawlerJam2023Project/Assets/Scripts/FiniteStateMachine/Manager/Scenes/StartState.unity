@@ -2174,6 +2174,11 @@ MonoBehaviour:
     objectToSpawn: {fileID: 8692320626851713345, guid: 9be570274da914d43860d6053f68ae9d, type: 3}
   - associatedKey: 66
     objectToSpawn: {fileID: 3686935092385065964, guid: 556c84ceaf34d844698b07f5ee6d3186, type: 3}
+  enemies:
+  - enemyName: Slime
+    enemyHP: 40
+    enemyAttack: 15
+    enemySprite: {fileID: 0}
   mazeSpawner: {fileID: 0}
   mazeSpawnerPrefab: {fileID: 4008347367771799831, guid: ff3e3820461645844aca5ee77f37f77a, type: 3}
   endGameLoadText: 'You have made it out of the dungeon. As you finally leave, and
