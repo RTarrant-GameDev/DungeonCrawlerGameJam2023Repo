@@ -9,4 +9,5 @@ public struct PlayerLevel {
     public int newLevelHP;
     public int newLevelDmg;
     public Sprite levelMeterCustomSprite;
+    public Material swordMaterial;
 }

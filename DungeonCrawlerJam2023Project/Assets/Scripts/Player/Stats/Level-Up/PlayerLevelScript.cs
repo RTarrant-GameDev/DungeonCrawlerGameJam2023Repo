@@ -14,6 +14,10 @@ public class PlayerLevelScript : MonoBehaviour {
         if(currentLevel.levelNumber < levels.Length) {
             checkXPForLevelUp();
         }
+
+        foreach (Transform swordObjChild in this.gameObject.GetComponent<PlayerAttack>().swordObj.transform) {
+            swordObjChild.gameObject.GetComponent<MeshRenderer>().material = currentLevel.swordMaterial;
+        }
     }
 
     public void AddXP(int xpToAdd) {
