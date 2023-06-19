@@ -27,11 +27,6 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: BladeMaterialLevel5
-    second: {fileID: 2100000, guid: 23c6fd4da856fc74d9b2586ed3e7c393, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
       name: CrossguardMaterialLevel1
     second: {fileID: 2100000, guid: 50cbd587f251ec848829ec1db4750193, type: 2}
   - first:
@@ -52,11 +47,6 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: CrossguardMaterialLevel5
-    second: {fileID: 2100000, guid: 9a07bce9fdc20cb4f839c225174c0e29, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
       name: HiltMaterialLevel1
     second: {fileID: 2100000, guid: d602859ffe5c51c449af2abc95a51b40, type: 2}
   - first:
@@ -74,11 +64,6 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: HiltMaterialLevel4
     second: {fileID: 2100000, guid: 3b910c2f43b76c64ea143921ae40fb37, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: HiltMaterialLevel5
-    second: {fileID: 2100000, guid: f25510d26a382514193bc6cdc117b33f, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
