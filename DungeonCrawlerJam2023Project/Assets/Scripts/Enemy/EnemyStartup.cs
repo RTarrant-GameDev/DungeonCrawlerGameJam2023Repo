@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyStartup : MonoBehaviour
-{
+public class EnemyStartup : MonoBehaviour {
     // Start is called before the first frame update
     void Start()
     {

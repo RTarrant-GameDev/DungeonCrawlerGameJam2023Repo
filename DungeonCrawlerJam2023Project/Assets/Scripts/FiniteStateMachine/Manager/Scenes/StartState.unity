@@ -2169,16 +2169,19 @@ MonoBehaviour:
   - associatedKey: 88
     objectToSpawn: {fileID: 8489804989553642005, guid: afc5d022c4043a1418ac574c791932f1, type: 3}
   - associatedKey: 69
-    objectToSpawn: {fileID: 7842753828577402015, guid: 8884f2be3ffd7944c9e74d79529e673f, type: 3}
+    objectToSpawn: {fileID: 4560338655254571021, guid: 382082508867b4949ac498c644b45726, type: 3}
   - associatedKey: 67
     objectToSpawn: {fileID: 8692320626851713345, guid: 9be570274da914d43860d6053f68ae9d, type: 3}
   - associatedKey: 66
     objectToSpawn: {fileID: 3686935092385065964, guid: 556c84ceaf34d844698b07f5ee6d3186, type: 3}
   enemies:
-  - enemyName: Slime
+  - enemyName: Skeleton
     enemyHP: 40
     enemyAttack: 15
-    enemySprite: {fileID: 0}
+    enemyXP: 10
+    enemySprite: {fileID: 510033250, guid: e440611e9b928624abcd3107f4cdfb23, type: 3}
+    attackAnim: {fileID: 7400000, guid: 347b39d7372bf6e459501f952bf02fc5, type: 2}
+    walkAnim: {fileID: 7400000, guid: f5c51196253e611429bf5f5afff524b5, type: 2}
   mazeSpawner: {fileID: 0}
   mazeSpawnerPrefab: {fileID: 4008347367771799831, guid: ff3e3820461645844aca5ee77f37f77a, type: 3}
   endGameLoadText: 'You have made it out of the dungeon. As you finally leave, and
