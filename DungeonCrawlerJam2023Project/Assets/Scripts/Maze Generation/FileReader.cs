@@ -15,7 +15,7 @@ public class FileReader : MonoBehaviour {
                 row++;
                 col = 0;
             } else {
-                this.gameObject.GetComponent<GameManagerScript>().PlaceObject(c, row, col);
+                this.gameObject.GetComponent<GameManagerScript>().characterMatchChecker(c, row, col);
                 col++;
             }
         }

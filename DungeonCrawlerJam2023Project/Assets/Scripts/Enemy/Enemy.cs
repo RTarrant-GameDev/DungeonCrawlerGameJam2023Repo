@@ -4,6 +4,7 @@ using UnityEngine;
 
 [System.Serializable]
 public struct Enemy {
+    public char associatedKey;
     public string enemyName;
     public int enemyHP;
     public int enemyAttack;

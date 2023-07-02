@@ -3,15 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyStartup : MonoBehaviour {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
+    public void Init(Enemy enemyType){
+        this.gameObject.GetComponent<SpriteRenderer>().sprite = enemyType.enemySprite;
+        this.gameObject.GetComponent<EnemyHealth>().maxHP = enemyType.enemyHP;
+        this.gameObject.GetComponent<EnemyHealth>().enemyXP = enemyType.enemyXP;
+        this.gameObject.GetComponent<EnemyAttack>().attackDmg = enemyType.enemyAttack;
+        this.gameObject.GetComponent<EnemyAttack>().attackAnim = enemyType.attackAnim;
         
     }
 }

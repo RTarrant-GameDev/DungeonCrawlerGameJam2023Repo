@@ -8,6 +8,7 @@ public class GameManagerScript : MonoBehaviour {
     public LevelObject[] levels;
     public MazeObject[] mazeObjects;
     public Enemy[] enemies;
+    public GameObject enemyPrefab;
     public GameObject mazeSpawner;
     public GameObject mazeSpawnerPrefab;
     public string endGameLoadText;
@@ -75,14 +76,31 @@ public class GameManagerScript : MonoBehaviour {
         this.gameObject.GetComponent<FileReader>().ReadFile(levelToGenerate.file);
     }
 
-    public void PlaceObject(char foundCharacter, float posX, float posZ) {
+    public void characterMatchChecker(char foundCharacter, float posX, float posZ){
         foreach(MazeObject mObjs in mazeObjects) {
             if(mObjs.associatedKey == foundCharacter) {
-                if(mObjs.objectToSpawn.name == "Player") {
-                    mObjs.objectToSpawn.GetComponent<PlayerLevelScript>().setLevelValuesFromSave(currentPlayerLevel.levelNumber, currentXPCount);
-                }
-                Instantiate(mObjs.objectToSpawn, new Vector3(posX, 1.0f, posZ), mObjs.objectToSpawn.transform.rotation).transform.parent = mazeSpawner.transform;
+                PlaceObject(mObjs.objectToSpawn, posX, posZ);
+                break;
             }
-        } 
+        }
+
+        foreach(Enemy eObj in enemies){
+            if(eObj.associatedKey == foundCharacter) {
+                PlaceEnemy(eObj, posX, posZ);
+                break;
+            }
+        }
+    }
+
+    public void PlaceObject(GameObject objToSpawn, float posX, float posZ) {
+        if(objToSpawn.name == "Player") {
+            objToSpawn.GetComponent<PlayerLevelScript>().setLevelValuesFromSave(currentPlayerLevel.levelNumber, currentXPCount);
+        }
+        Instantiate(objToSpawn, new Vector3(posX, 1.0f, posZ), objToSpawn.transform.rotation).transform.parent = mazeSpawner.transform;
+    }
+
+    public void PlaceEnemy(Enemy enemyType, float posX, float posZ) {
+        Instantiate(enemyPrefab, new Vector3(posX, 1.0f, posZ), enemyPrefab.transform.rotation).transform.parent = mazeSpawner.transform;
+        enemyPrefab.GetComponent<EnemyStartup>().Init(enemyType);
     }
 }
