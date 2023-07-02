@@ -12,4 +12,5 @@ public struct Enemy {
     public Sprite enemySprite;
     public AnimationClip attackAnim;
     public AnimationClip walkAnim;
+    public AnimationClip idleAnim;
 }

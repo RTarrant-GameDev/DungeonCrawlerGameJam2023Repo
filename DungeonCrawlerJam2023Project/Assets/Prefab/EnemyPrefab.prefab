@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 510033250, guid: e440611e9b928624abcd3107f4cdfb23, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -87,7 +87,7 @@ SpriteRenderer:
   m_Size: {x: 0.796875, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &6073066060256317835
@@ -135,7 +135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c653a93504a8c4fb0073162e6676db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDmg: 0
+  attackDmg: 15
   player: {fileID: 3757105543209936647, guid: 0df1a88e8deb59c4f83ff88b4070ed34, type: 3}
   attackRange: 1
   attackCooldown: 2.5
@@ -145,7 +145,7 @@ MonoBehaviour:
   obstacleLayerMask:
     serializedVersion: 2
     m_Bits: 64
-  attackAnim: {fileID: 0}
+  attackAnim: {fileID: 7400000, guid: 347b39d7372bf6e459501f952bf02fc5, type: 2}
   attackSFX: {fileID: 8300000, guid: 4750c70ffaf21f345a73506b003e8a11, type: 3}
 --- !u!114 &7669670643211543235
 MonoBehaviour:
@@ -160,8 +160,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currHP: 0
-  maxHP: 100
-  enemyXP: 15
+  maxHP: 40
+  enemyXP: 10
   damageSFX: {fileID: 8300000, guid: be847923c2d4f5445bf747e7699e3a14, type: 3}
   deathSFX: {fileID: 8300000, guid: b6e8f92d38f60f34ca1e901d127711bc, type: 3}
 --- !u!82 &-4389119472658859941
