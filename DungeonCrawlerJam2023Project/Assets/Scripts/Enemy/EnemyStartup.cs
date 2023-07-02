@@ -9,6 +9,6 @@ public class EnemyStartup : MonoBehaviour {
         this.gameObject.GetComponent<EnemyHealth>().enemyXP = enemyType.enemyXP;
         this.gameObject.GetComponent<EnemyAttack>().attackDmg = enemyType.enemyAttack;
         this.gameObject.GetComponent<EnemyAttack>().attackAnim = enemyType.attackAnim;
-        
+        this.gameObject.GetComponent<EnemyAttack>().idleAnim = enemyType.idleAnim;
     }
 }
