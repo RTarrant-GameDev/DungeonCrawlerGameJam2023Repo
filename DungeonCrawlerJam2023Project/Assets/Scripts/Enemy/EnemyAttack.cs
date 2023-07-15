@@ -34,19 +34,23 @@ public class EnemyAttack : MonoBehaviour {
             playerInRange = false;
         }
 
-        if (playerInRange && Time.time - lastAttackTime >= attackCooldown && !isAttacking){
-            StartCoroutine(Attack());
+        if (playerInRange) {
+            Vector3 direction = player.transform.position - this.gameObject.transform.position;
+            this.gameObject.transform.rotation = Quaternion.LookRotation(direction);
+            if(Time.time - lastAttackTime >= attackCooldown && !isAttacking) {
+                StartCoroutine(Attack());
+            }
         }
     }
 
     public IEnumerator Attack() {
         isAttacking = true;
         attackAnim.wrapMode = WrapMode.Once;
-        this.gameObject.GetComponent<Animator>().Play(attackAnim.name, -1, 0f);
+        this.gameObject.GetComponent<Animator>().Play("enemyAttack", -1, 0f);
         yield return new WaitForSeconds(attackAnim.length);
         this.gameObject.GetComponent<AudioSource>().PlayOneShot(attackSFX);
         player.gameObject.GetComponent<PlayerHealth>().SubtractHP(attackDmg);
-        this.gameObject.GetComponent<Animator>().Play(idleAnim.name, -1, 0f);
+        this.gameObject.GetComponent<Animator>().Play("enemyIdle", -1, 0f);
 
         isAttacking = false;
         lastAttackTime = Time.time;

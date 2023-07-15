@@ -2173,15 +2173,20 @@ MonoBehaviour:
   - associatedKey: 66
     objectToSpawn: {fileID: 3686935092385065964, guid: 556c84ceaf34d844698b07f5ee6d3186, type: 3}
   enemies:
-  - associatedKey: 83
+  - associatedKey: 76
     enemyName: Skeleton
-    enemyHP: 40
-    enemyAttack: 15
+    enemyHP: 20
+    enemyAttack: 5
     enemyXP: 10
     enemySprite: {fileID: 510033250, guid: e440611e9b928624abcd3107f4cdfb23, type: 3}
-    attackAnim: {fileID: 7400000, guid: 347b39d7372bf6e459501f952bf02fc5, type: 2}
-    walkAnim: {fileID: 7400000, guid: f5c51196253e611429bf5f5afff524b5, type: 2}
-    idleAnim: {fileID: 7400000, guid: 631287042de56444dabe952b6bdbca32, type: 2}
+    overrideController: {fileID: 22100000, guid: 0966847aa8c1f2b41bc607f7c9dd4d5f, type: 2}
+  - associatedKey: 83
+    enemyName: Slime
+    enemyHP: 15
+    enemyAttack: 5
+    enemyXP: 20
+    enemySprite: {fileID: -126368652, guid: 9d83e6dbb1442b24c85bd89eb79da9ba, type: 3}
+    overrideController: {fileID: 22100000, guid: d3c36c532bb121e4b87f6702320a4f5c, type: 2}
   enemyPrefab: {fileID: 4560338655254571021, guid: 382082508867b4949ac498c644b45726, type: 3}
   mazeSpawner: {fileID: 0}
   mazeSpawnerPrefab: {fileID: 4008347367771799831, guid: ff3e3820461645844aca5ee77f37f77a, type: 3}
