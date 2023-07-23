@@ -199,7 +199,7 @@ GameObject:
   - component: {fileID: -4763569730641430055}
   m_Layer: 7
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -313,9 +313,9 @@ MonoBehaviour:
     levelNumber: 1
     xpToReachLevel: 0
     newLevelHP: 100
-    newLevelDmg: 20
-    levelMeterCustomSprite: {fileID: 0}
-    swordMaterial: {fileID: 0}
+    newLevelDmg: 10
+    levelMeterCustomSprite: {fileID: 21300000, guid: 6691cbcc28c44e04ab5daf3f00751351, type: 3}
+    swordMaterial: {fileID: 2100000, guid: 4029ddf856db48a4495410bb28b0fa9e, type: 2}
   levels:
   - levelNumber: 1
     xpToReachLevel: 0

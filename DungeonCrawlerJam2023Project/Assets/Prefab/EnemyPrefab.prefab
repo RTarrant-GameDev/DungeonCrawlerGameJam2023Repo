@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3919587473667541775}
   - component: {fileID: 2964147854003568621}
   - component: {fileID: 6073066060256317835}
+  - component: {fileID: -4915549734522550545}
   - component: {fileID: 4708227584174016177}
   - component: {fileID: 8838209381246593145}
   - component: {fileID: 7669670643211543235}
@@ -79,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -126368652, guid: 9d83e6dbb1442b24c85bd89eb79da9ba, type: 3}
+  m_Sprite: {fileID: 510033250, guid: e440611e9b928624abcd3107f4cdfb23, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -100,7 +101,7 @@ Animator:
   m_GameObject: {fileID: 4560338655254571021}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 22100000, guid: d3c36c532bb121e4b87f6702320a4f5c, type: 2}
+  m_Controller: {fileID: 22100000, guid: 0966847aa8c1f2b41bc607f7c9dd4d5f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -111,6 +112,25 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-4915549734522550545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4560338655254571021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4aaab84bd1d0bcb4cb8d2c6c833dfd33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canMoveLeft: 0
+  canMoveRight: 0
+  canMoveForward: 0
+  canMoveBackward: 0
+  currDirection: {x: 0, y: 0, z: 0}
+  player: {fileID: 0}
+  playerDetected: 0
 --- !u!114 &4708227584174016177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,7 +143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09939eb2ea41f334a9cda308aebc4c9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  overrideController: {fileID: 22100000, guid: d3c36c532bb121e4b87f6702320a4f5c, type: 2}
+  overrideController: {fileID: 22100000, guid: 0966847aa8c1f2b41bc607f7c9dd4d5f, type: 2}
 --- !u!114 &8838209381246593145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -146,8 +166,8 @@ MonoBehaviour:
   obstacleLayerMask:
     serializedVersion: 2
     m_Bits: 64
-  attackAnim: {fileID: 7400000, guid: e9a718ca9bf3d5348b3e90bc50909a6c, type: 2}
-  idleAnim: {fileID: 7400000, guid: 214bbfc7756e82e47bdabe4cb988e8cf, type: 2}
+  attackAnim: {fileID: 7400000, guid: 347b39d7372bf6e459501f952bf02fc5, type: 2}
+  idleAnim: {fileID: 7400000, guid: 631287042de56444dabe952b6bdbca32, type: 2}
   attackSFX: {fileID: 8300000, guid: 4750c70ffaf21f345a73506b003e8a11, type: 3}
 --- !u!114 &7669670643211543235
 MonoBehaviour:
@@ -162,8 +182,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currHP: 0
-  maxHP: 15
-  enemyXP: 20
+  maxHP: 20
+  enemyXP: 10
   damageSFX: {fileID: 8300000, guid: be847923c2d4f5445bf747e7699e3a14, type: 3}
   deathSFX: {fileID: 8300000, guid: b6e8f92d38f60f34ca1e901d127711bc, type: 3}
 --- !u!82 &-4389119472658859941

@@ -23,13 +23,9 @@ public class EnemyAttack : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        RaycastHit hit;
-        if(Physics.Raycast(transform.position, player.position - transform.position, out hit, Mathf.Infinity, playerLayerMask)) {
-            if (hit.distance <= attackRange && !Physics.Linecast(transform.position, player.position, obstacleLayerMask)) {
-                playerInRange = true;
-            } else {
-                playerInRange = false;
-            }
+        if (Vector3.Distance(player.transform.position, this.gameObject.transform.position) 
+        <= attackRange && this.gameObject.GetComponent<EnemyCollision>().playerDetected) {
+            playerInRange = true;
         } else {
             playerInRange = false;
         }
