@@ -9,9 +9,12 @@ public class EnemyAttack : MonoBehaviour {
     public float attackCooldown = 2.5f;
     public LayerMask playerLayerMask;
     public LayerMask obstacleLayerMask;
+    public AnimationClip attackAnim;
+    public AnimationClip idleAnim;
     public AudioClip attackSFX;
     private float lastAttackTime = 0.0f;
     private bool playerInRange = false;
+    private bool isAttacking = false;
 
     // Start is called before the first frame update
     void Start() {
@@ -20,30 +23,32 @@ public class EnemyAttack : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        RaycastHit hit;
-        if(Physics.Raycast(transform.position, player.position - transform.position, out hit, Mathf.Infinity, playerLayerMask)) {
-            if (hit.distance <= attackRange && !Physics.Linecast(transform.position, player.position, obstacleLayerMask)) {
-                playerInRange = true;
-            } else {
-                playerInRange = false;
-            }
+        if (Vector3.Distance(player.transform.position, this.gameObject.transform.position) 
+        <= attackRange && this.gameObject.GetComponent<EnemyCollision>().playerDetected) {
+            playerInRange = true;
         } else {
             playerInRange = false;
         }
 
-        if (playerInRange && Time.time - lastAttackTime >= attackCooldown){
-            Attack();
+        if (playerInRange) {
+            Vector3 direction = player.transform.position - this.gameObject.transform.position;
+            this.gameObject.transform.rotation = Quaternion.LookRotation(direction);
+            if(Time.time - lastAttackTime >= attackCooldown && !isAttacking) {
+                StartCoroutine(Attack());
+            }
         }
     }
 
-    void Attack() {
+    public IEnumerator Attack() {
+        isAttacking = true;
+        attackAnim.wrapMode = WrapMode.Once;
+        this.gameObject.GetComponent<Animator>().Play("enemyAttack", -1, 0f);
+        yield return new WaitForSeconds(attackAnim.length);
         this.gameObject.GetComponent<AudioSource>().PlayOneShot(attackSFX);
-        if(this.gameObject.tag == "Enemy") {
-            player.gameObject.GetComponent<PlayerHealth>().SubtractHP(Mathf.RoundToInt(player.gameObject.GetComponent<PlayerHealth>().maxHealth * .125f)); //chip off 12.5% of player's health for each attack
-        } else {
-            player.gameObject.GetComponent<PlayerHealth>().SubtractHP(attackDmg);
-        }
+        player.gameObject.GetComponent<PlayerHealth>().SubtractHP(attackDmg);
+        this.gameObject.GetComponent<Animator>().Play("enemyIdle", -1, 0f);
 
+        isAttacking = false;
         lastAttackTime = Time.time;
     }
 }

@@ -11,10 +11,6 @@ public class EnemyHealth : MonoBehaviour {
     public AudioClip deathSFX;
 
     void Start() {
-        if(this.gameObject.tag == "Enemy") { //only scale enemy HP with player
-            maxHP = GameManagerScript.Instance.currentPlayerLevel.newLevelHP;
-        }
-        
         currHP = maxHP;
     }
 

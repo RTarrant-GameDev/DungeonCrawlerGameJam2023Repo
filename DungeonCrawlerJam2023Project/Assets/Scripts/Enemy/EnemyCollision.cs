@@ -2,17 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WallCollisionDetection : MonoBehaviour {
-    public Ray rayLeft;
-    public Ray rayRight;
-    public Ray rayForward;
-    public Ray rayBackward;
-    public bool canMoveLeft;
-    public bool canMoveRight;
-    public bool canMoveForward;
-    public bool canMoveBackward;
-
-    public Vector3 currDirection;
+public class EnemyCollision : WallCollisionDetection {
+    public GameObject player;
+    public bool playerDetected;
 
     void Awake() {
         canMoveLeft = true;
@@ -21,6 +13,11 @@ public class WallCollisionDetection : MonoBehaviour {
         canMoveBackward = true;
     }
 
+    void Start() {
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
+
+    // Update is called once per frame
     void FixedUpdate() {
         currDirection = this.gameObject.transform.position;
 
@@ -31,13 +28,24 @@ public class WallCollisionDetection : MonoBehaviour {
     }
 
     void Update() {
+        playerDetected = playerSpotted(rayForward);
         canMoveLeft = RayHit(rayLeft);
         canMoveForward = RayHit(rayForward);
         canMoveRight = RayHit(rayRight);
         canMoveBackward = RayHit(rayBackward);
     }
 
-    protected virtual bool validGameObject(GameObject gObj){
+    public bool playerSpotted(Ray ray) {
+        RaycastHit other = new RaycastHit();
+        if(Physics.Raycast(ray.origin, ray.direction, out other) && other.transform.gameObject == player) {
+            Debug.Log("Player spotted by mob");
+            return true; //if player spotted return true
+        } else {
+            return false;
+        }
+    }
+
+    public bool validGameObject(GameObject gObj){
         if(gObj == null) {
             return false;
         }
@@ -48,7 +56,7 @@ public class WallCollisionDetection : MonoBehaviour {
         return isExit || isCollectible;
     }
 
-    protected virtual bool RayHit(Ray ray) {
+    public bool RayHit(Ray ray) {
         RaycastHit other = new RaycastHit();
         if((Physics.Raycast(ray.origin, ray.direction, out other) && other.distance <= 1.0f) && !validGameObject(other.transform.gameObject)) {
             return false;

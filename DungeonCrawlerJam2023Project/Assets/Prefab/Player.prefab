@@ -84,100 +84,6 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 704902877172596184}
   m_Enabled: 1
---- !u!1 &3567097356320149644
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4776814539056312905}
-  - component: {fileID: 641811804002515726}
-  m_Layer: 0
-  m_Name: Point Light
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4776814539056312905
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3567097356320149644}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.36, y: 0, z: 2.71}
-  m_LocalScale: {x: 2, y: 2, z: 2}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3757105543209936647}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!108 &641811804002515726
-Light:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3567097356320149644}
-  m_Enabled: 1
-  serializedVersion: 10
-  m_Type: 2
-  m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
-  m_Range: 76
-  m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 2
-    m_Resolution: -1
-    m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
-    m_CullingMatrixOverride:
-      e00: 1
-      e01: 0
-      e02: 0
-      e03: 0
-      e10: 0
-      e11: 1
-      e12: 0
-      e13: 0
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-    m_UseCullingMatrixOverride: 0
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingLayerMask: 1
-  m_Lightmapping: 4
-  m_LightShadowCasterMode: 0
-  m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
-  m_UseBoundingSphereOverride: 0
-  m_UseViewFrustumForShadowCasterCull: 1
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
 --- !u!1 &6687633006253761627
 GameObject:
   m_ObjectHideFlags: 0
@@ -199,7 +105,7 @@ GameObject:
   - component: {fileID: -4763569730641430055}
   m_Layer: 7
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -217,7 +123,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4758882541989681733}
-  - {fileID: 4776814539056312905}
   - {fileID: 8443917036363577590}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -313,20 +218,20 @@ MonoBehaviour:
     levelNumber: 1
     xpToReachLevel: 0
     newLevelHP: 100
-    newLevelDmg: 20
-    levelMeterCustomSprite: {fileID: 0}
-    swordMaterial: {fileID: 0}
+    newLevelDmg: 10
+    levelMeterCustomSprite: {fileID: 21300000, guid: 6691cbcc28c44e04ab5daf3f00751351, type: 3}
+    swordMaterial: {fileID: 2100000, guid: 4029ddf856db48a4495410bb28b0fa9e, type: 2}
   levels:
   - levelNumber: 1
     xpToReachLevel: 0
     newLevelHP: 100
-    newLevelDmg: 20
+    newLevelDmg: 10
     levelMeterCustomSprite: {fileID: 21300000, guid: 6691cbcc28c44e04ab5daf3f00751351, type: 3}
     swordMaterial: {fileID: 2100000, guid: 4029ddf856db48a4495410bb28b0fa9e, type: 2}
   - levelNumber: 2
     xpToReachLevel: 1000
     newLevelHP: 150
-    newLevelDmg: 30
+    newLevelDmg: 20
     levelMeterCustomSprite: {fileID: 21300000, guid: 29030a4f05122404c94a24e12e405b73, type: 3}
     swordMaterial: {fileID: 2100000, guid: 49792b41fcff84b4f95d7d6dc79cacc4, type: 2}
   - levelNumber: 3
@@ -338,19 +243,19 @@ MonoBehaviour:
   - levelNumber: 4
     xpToReachLevel: 2500
     newLevelHP: 300
-    newLevelDmg: 60
+    newLevelDmg: 80
     levelMeterCustomSprite: {fileID: 21300000, guid: 7a88d0f05edd26d42915cfb6ff8013bb, type: 3}
     swordMaterial: {fileID: 2100000, guid: ffec98788648fac4fb24ba2667c41ef6, type: 2}
   - levelNumber: 5
     xpToReachLevel: 3000
     newLevelHP: 420
-    newLevelDmg: 90
+    newLevelDmg: 140
     levelMeterCustomSprite: {fileID: 21300000, guid: 5f96d6067c1e3a244ae439d35e7b5c74, type: 3}
     swordMaterial: {fileID: 2100000, guid: 44f359d3112d9cd488e42682857e9822, type: 2}
   - levelNumber: 6
     xpToReachLevel: 5000
     newLevelHP: 500
-    newLevelDmg: 130
+    newLevelDmg: 180
     levelMeterCustomSprite: {fileID: 21300000, guid: 5d1f404f2def814418953564aa74a20e, type: 3}
     swordMaterial: {fileID: 2100000, guid: 23c6fd4da856fc74d9b2586ed3e7c393, type: 2}
   - levelNumber: 7
@@ -515,7 +420,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: d494a9610856e414e92cdbed67e34750, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d494a9610856e414e92cdbed67e34750, type: 3}
       propertyPath: m_LocalScale.x

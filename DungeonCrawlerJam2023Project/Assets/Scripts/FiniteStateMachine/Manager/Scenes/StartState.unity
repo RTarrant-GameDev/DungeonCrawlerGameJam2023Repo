@@ -2168,12 +2168,26 @@ MonoBehaviour:
     objectToSpawn: {fileID: 6687633006253761627, guid: 0df1a88e8deb59c4f83ff88b4070ed34, type: 3}
   - associatedKey: 88
     objectToSpawn: {fileID: 8489804989553642005, guid: afc5d022c4043a1418ac574c791932f1, type: 3}
-  - associatedKey: 69
-    objectToSpawn: {fileID: 7842753828577402015, guid: 8884f2be3ffd7944c9e74d79529e673f, type: 3}
   - associatedKey: 67
     objectToSpawn: {fileID: 8692320626851713345, guid: 9be570274da914d43860d6053f68ae9d, type: 3}
   - associatedKey: 66
     objectToSpawn: {fileID: 3686935092385065964, guid: 556c84ceaf34d844698b07f5ee6d3186, type: 3}
+  enemies:
+  - associatedKey: 76
+    enemyName: Skeleton
+    enemyHP: 20
+    enemyAttack: 5
+    enemyXP: 10
+    enemySprite: {fileID: 510033250, guid: e440611e9b928624abcd3107f4cdfb23, type: 3}
+    overrideController: {fileID: 22100000, guid: 0966847aa8c1f2b41bc607f7c9dd4d5f, type: 2}
+  - associatedKey: 83
+    enemyName: Slime
+    enemyHP: 15
+    enemyAttack: 5
+    enemyXP: 20
+    enemySprite: {fileID: -126368652, guid: 9d83e6dbb1442b24c85bd89eb79da9ba, type: 3}
+    overrideController: {fileID: 22100000, guid: d3c36c532bb121e4b87f6702320a4f5c, type: 2}
+  enemyPrefab: {fileID: 4560338655254571021, guid: 382082508867b4949ac498c644b45726, type: 3}
   mazeSpawner: {fileID: 0}
   mazeSpawnerPrefab: {fileID: 4008347367771799831, guid: ff3e3820461645844aca5ee77f37f77a, type: 3}
   endGameLoadText: 'You have made it out of the dungeon. As you finally leave, and
