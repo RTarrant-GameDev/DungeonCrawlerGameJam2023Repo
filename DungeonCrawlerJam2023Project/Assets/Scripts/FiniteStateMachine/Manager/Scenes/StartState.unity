@@ -2107,7 +2107,7 @@ MonoBehaviour:
   levels:
   - levelX: 15
     levelZ: 15
-    file: {fileID: 4900000, guid: a2a710df7d1b9564b9f2ccb073be07d1, type: 3}
+    file: {fileID: 4900000, guid: 89f2594a92ca15742a2f120290166051, type: 3}
     levelLoadText: 'You have woken up in a dungeon in the South Western Kingdoms.
       You know not why you are here, only that those kept there tend not to make
       it out alive, or last long. You see a jet black greatsword sitting right in
@@ -2187,7 +2187,16 @@ MonoBehaviour:
     enemyXP: 20
     enemySprite: {fileID: -126368652, guid: 9d83e6dbb1442b24c85bd89eb79da9ba, type: 3}
     overrideController: {fileID: 22100000, guid: d3c36c532bb121e4b87f6702320a4f5c, type: 2}
+  bosses:
+  - enemyName: Corrupted Jailer
+    enemyHP: 1200
+    enemyAttack: 75
+    enemyXP: 10000
+    enemySprite: {fileID: 276076179, guid: 02a1a00122053674cb3d8a06d51979e0, type: 3}
+    overrideController: {fileID: 22100000, guid: e6f0d3aacd447c2449edd32bb5a531c4, type: 2}
+    levelNumber: 6
   enemyPrefab: {fileID: 4560338655254571021, guid: 382082508867b4949ac498c644b45726, type: 3}
+  bossPrefab: {fileID: 3686935092385065964, guid: 556c84ceaf34d844698b07f5ee6d3186, type: 3}
   mazeSpawner: {fileID: 0}
   mazeSpawnerPrefab: {fileID: 4008347367771799831, guid: ff3e3820461645844aca5ee77f37f77a, type: 3}
   endGameLoadText: 'You have made it out of the dungeon. As you finally leave, and

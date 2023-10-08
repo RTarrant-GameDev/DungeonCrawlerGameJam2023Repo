@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyCollision : WallCollisionDetection {
+public class BossCollision : WallCollisionDetection {
     public GameObject player;
     public bool playerDetected;
 
