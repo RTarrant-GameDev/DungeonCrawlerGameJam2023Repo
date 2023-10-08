@@ -10,13 +10,15 @@ GameObject:
   m_Component:
   - component: {fileID: 3686935092385065962}
   - component: {fileID: 3686935092385065961}
-  - component: {fileID: 3686935092385065966}
-  - component: {fileID: 3686935092385065967}
   - component: {fileID: -3716042307550868947}
   - component: {fileID: 9062549687395735815}
   - component: {fileID: -6900516092629478139}
+  - component: {fileID: 8206793301340497597}
+  - component: {fileID: 8363929319169487719}
+  - component: {fileID: 8624691294163325273}
+  - component: {fileID: 5647692378718428198}
   m_Layer: 0
-  m_Name: Boss
+  m_Name: BossPrefab
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -50,48 +52,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3686935092385065966
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3686935092385065964}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a33e1635e3338224b89b9705c2e3086f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currHP: 0
-  maxHP: 1000
-  enemyXP: 100000
-  damageSFX: {fileID: 8300000, guid: be847923c2d4f5445bf747e7699e3a14, type: 3}
-  deathSFX: {fileID: 8300000, guid: b6e8f92d38f60f34ca1e901d127711bc, type: 3}
---- !u!114 &3686935092385065967
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3686935092385065964}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40c653a93504a8c4fb0073162e6676db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackDmg: 120
-  player: {fileID: 0}
-  attackRange: 1
-  attackCooldown: 2.5
-  playerLayerMask:
-    serializedVersion: 2
-    m_Bits: 128
-  obstacleLayerMask:
-    serializedVersion: 2
-    m_Bits: 64
-  attackAnim: {fileID: 7400000, guid: 79840cc142cb8614cab98535fa580c00, type: 2}
-  idleAnim: {fileID: 7400000, guid: 577c071e42235054b89b2b514a1760e9, type: 2}
-  attackSFX: {fileID: 8300000, guid: 4750c70ffaf21f345a73506b003e8a11, type: 3}
 --- !u!82 &-3716042307550868947
 AudioSource:
   m_ObjectHideFlags: 0
@@ -261,3 +221,77 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8206793301340497597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3686935092385065964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1c67090862f46b40866a220a227719d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDmg: 0
+  player: {fileID: 3757105543209936647, guid: 0df1a88e8deb59c4f83ff88b4070ed34, type: 3}
+  attackRange: 1.25
+  attackCooldown: 2.5
+  playerLayerMask:
+    serializedVersion: 2
+    m_Bits: 128
+  obstacleLayerMask:
+    serializedVersion: 2
+    m_Bits: 64
+  attackAnim: {fileID: 7400000, guid: 79840cc142cb8614cab98535fa580c00, type: 2}
+  idleAnim: {fileID: 7400000, guid: 577c071e42235054b89b2b514a1760e9, type: 2}
+  attackSFX: {fileID: 8300000, guid: 4750c70ffaf21f345a73506b003e8a11, type: 3}
+--- !u!114 &8363929319169487719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3686935092385065964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eefa8d4488ad9244ea661a2dab4b94fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canMoveLeft: 0
+  canMoveRight: 0
+  canMoveForward: 0
+  canMoveBackward: 0
+  currDirection: {x: 0, y: 0, z: 0}
+  player: {fileID: 0}
+  playerDetected: 0
+--- !u!114 &8624691294163325273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3686935092385065964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc02d42da16725e4f9493f243cc8b088, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currHP: 0
+  maxHP: 0
+  enemyXP: 0
+  damageSFX: {fileID: 8300000, guid: be847923c2d4f5445bf747e7699e3a14, type: 3}
+  deathSFX: {fileID: 8300000, guid: b6e8f92d38f60f34ca1e901d127711bc, type: 3}
+--- !u!114 &5647692378718428198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3686935092385065964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c75e73637a3786e409afeadb0e6cecfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  overrideController: {fileID: 0}

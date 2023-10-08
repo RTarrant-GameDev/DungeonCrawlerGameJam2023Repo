@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyAttack : MonoBehaviour {
+public class BossAttack : MonoBehaviour {
     public int attackDmg;
     public Transform player;
     public float attackRange = 1.25f;
@@ -24,7 +24,7 @@ public class EnemyAttack : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         if (Vector3.Distance(player.transform.position, this.gameObject.transform.position) 
-        <= attackRange && this.gameObject.GetComponent<EnemyCollision>().playerDetected) {
+        <= attackRange && this.gameObject.GetComponent<BossCollision>().playerDetected) {
             playerInRange = true;
         } else {
             playerInRange = false;
@@ -42,11 +42,11 @@ public class EnemyAttack : MonoBehaviour {
     public IEnumerator Attack() {
         isAttacking = true;
         attackAnim.wrapMode = WrapMode.Once;
-        this.gameObject.GetComponent<Animator>().Play("enemyAttack", -1, 0f);
+        this.gameObject.GetComponent<Animator>().Play("BossAttack", -1, 0f);
         yield return new WaitForSeconds(attackAnim.length);
         this.gameObject.GetComponent<AudioSource>().PlayOneShot(attackSFX);
         player.gameObject.GetComponent<PlayerHealth>().SubtractHP(attackDmg);
-        this.gameObject.GetComponent<Animator>().Play("enemyIdle", -1, 0f);
+        this.gameObject.GetComponent<Animator>().Play("BossIdle", -1, 0f);
 
         isAttacking = false;
         lastAttackTime = Time.time;

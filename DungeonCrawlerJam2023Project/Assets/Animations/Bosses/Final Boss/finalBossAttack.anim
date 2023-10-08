@@ -21,15 +21,15 @@ AnimationClip:
   - curve:
     - time: 0
       value: {fileID: 276076179, guid: 02a1a00122053674cb3d8a06d51979e0, type: 3}
-    - time: 0.16666667
-      value: {fileID: 1354220885, guid: 02a1a00122053674cb3d8a06d51979e0, type: 3}
     - time: 0.33333334
+      value: {fileID: 1354220885, guid: 02a1a00122053674cb3d8a06d51979e0, type: 3}
+    - time: 0.5833333
       value: {fileID: 403739433, guid: 02a1a00122053674cb3d8a06d51979e0, type: 3}
-    - time: 0.41666666
-      value: {fileID: -1413206488, guid: 02a1a00122053674cb3d8a06d51979e0, type: 3}
-    - time: 0.5
-      value: {fileID: -817742130, guid: 02a1a00122053674cb3d8a06d51979e0, type: 3}
     - time: 0.6666667
+      value: {fileID: -1413206488, guid: 02a1a00122053674cb3d8a06d51979e0, type: 3}
+    - time: 0.75
+      value: {fileID: -817742130, guid: 02a1a00122053674cb3d8a06d51979e0, type: 3}
+    - time: 0.9
       value: {fileID: -1413206488, guid: 02a1a00122053674cb3d8a06d51979e0, type: 3}
     - time: 1
       value: {fileID: 276076179, guid: 02a1a00122053674cb3d8a06d51979e0, type: 3}
@@ -38,7 +38,7 @@ AnimationClip:
     classID: 212
     script: {fileID: 0}
   m_SampleRate: 60
-  m_WrapMode: 0
+  m_WrapMode: 1
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}

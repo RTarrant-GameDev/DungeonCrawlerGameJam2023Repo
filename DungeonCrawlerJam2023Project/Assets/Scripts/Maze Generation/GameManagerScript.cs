@@ -4,13 +4,22 @@ using System.IO;
 using UnityEngine;
 
 public class GameManagerScript : MonoBehaviour {
+    [Header("Levels")]
     public LevelObject currentLevel;
     public LevelObject[] levels;
+
+    [Header("Arrays")]
     public MazeObject[] mazeObjects;
     public Enemy[] enemies;
+    public Boss[] bosses;
+
+    [Header("Prefabs")]
     public GameObject enemyPrefab;
+    public GameObject bossPrefab;
     public GameObject mazeSpawner;
     public GameObject mazeSpawnerPrefab;
+
+
     public string endGameLoadText;
     public PlayerLevel currentPlayerLevel;
     public int currentXPCount;
@@ -90,6 +99,14 @@ public class GameManagerScript : MonoBehaviour {
                 break;
             }
         }
+        if(foundCharacter=='b') {
+            foreach (Boss bObj in bosses) {
+                if(bObj.levelNumber == (System.Array.IndexOf(levels, currentLevel)+1)) {
+                    PlaceBoss(bObj, posX, posZ);
+                    break;
+                }
+            }
+        }
     }
 
     public void PlaceObject(GameObject objToSpawn, float posX, float posZ) {
@@ -102,5 +119,10 @@ public class GameManagerScript : MonoBehaviour {
     public void PlaceEnemy(Enemy enemyType, float posX, float posZ) {
         Instantiate(enemyPrefab, new Vector3(posX, 1.0f, posZ), enemyPrefab.transform.rotation).transform.parent = mazeSpawner.transform;
         enemyPrefab.GetComponent<EnemyStartup>().Init(enemyType);
+    }
+
+    public void PlaceBoss(Boss bossType, float posX, float posZ) {
+        Instantiate(bossPrefab, new Vector3(posX, 1.0f, posZ), bossPrefab.transform.rotation).transform.parent = mazeSpawner.transform;
+        bossPrefab.GetComponent<BossStartup>().Init(bossType);
     }
 }

@@ -39,7 +39,11 @@ public class PlayerAttack : MonoBehaviour {
         float currentTime = Time.time;
         if(CooldownProgress() >= cooldownTime) {
             StartCoroutine(SwordAttack());
-            enemy.GetComponent<EnemyHealth>().SubtractHP(dmgNumber);
+            if(enemy.name=="BossPrefab(Clone)"){
+                enemy.GetComponent<BossHealth>().SubtractHP(dmgNumber);
+            } else {
+                enemy.GetComponent<EnemyHealth>().SubtractHP(dmgNumber);
+            }
             lastAttackTime = currentTime;
         }
     }
