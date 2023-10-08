@@ -28,14 +28,14 @@ public class EnemyCollision : WallCollisionDetection {
     }
 
     void Update() {
-        playerDetected = playerSpotted(rayForward);
+        playerDetected = PlayerSpotted(rayForward) || PlayerSpotted(rayRight) || PlayerSpotted(rayBackward) || PlayerSpotted(rayLeft);
         canMoveLeft = RayHit(rayLeft);
         canMoveForward = RayHit(rayForward);
         canMoveRight = RayHit(rayRight);
         canMoveBackward = RayHit(rayBackward);
     }
 
-    public bool playerSpotted(Ray ray) {
+    public bool PlayerSpotted(Ray ray) {
         RaycastHit other = new RaycastHit();
         if(Physics.Raycast(ray.origin, ray.direction, out other) && other.transform.gameObject == player) {
             Debug.Log("Player spotted by mob");
@@ -45,7 +45,7 @@ public class EnemyCollision : WallCollisionDetection {
         }
     }
 
-    public bool validGameObject(GameObject gObj){
+    public bool ValidGameObject(GameObject gObj){
         if(gObj == null) {
             return false;
         }
@@ -58,7 +58,7 @@ public class EnemyCollision : WallCollisionDetection {
 
     public bool RayHit(Ray ray) {
         RaycastHit other = new RaycastHit();
-        if((Physics.Raycast(ray.origin, ray.direction, out other) && other.distance <= 1.0f) && !validGameObject(other.transform.gameObject)) {
+        if(Physics.Raycast(ray.origin, ray.direction, out other) && other.distance <= 1.0f && !ValidGameObject(other.transform.gameObject)) {
             return false;
         } else {
             return true;

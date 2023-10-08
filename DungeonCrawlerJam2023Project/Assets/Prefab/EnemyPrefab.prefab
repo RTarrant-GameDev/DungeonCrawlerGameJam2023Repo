@@ -158,7 +158,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackDmg: 5
   player: {fileID: 3757105543209936647, guid: 0df1a88e8deb59c4f83ff88b4070ed34, type: 3}
-  attackRange: 1
+  attackRange: 1.25
   attackCooldown: 2.5
   playerLayerMask:
     serializedVersion: 2

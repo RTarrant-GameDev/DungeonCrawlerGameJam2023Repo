@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyAttack : MonoBehaviour {
     public int attackDmg;
     public Transform player;
-    public float attackRange = 1.0f;
+    public float attackRange = 1.25f;
     public float attackCooldown = 2.5f;
     public LayerMask playerLayerMask;
     public LayerMask obstacleLayerMask;
@@ -31,6 +31,7 @@ public class EnemyAttack : MonoBehaviour {
         }
 
         if (playerInRange) {
+            Debug.Log("In Range");
             Vector3 direction = player.transform.position - this.gameObject.transform.position;
             this.gameObject.transform.rotation = Quaternion.LookRotation(direction);
             if(Time.time - lastAttackTime >= attackCooldown && !isAttacking) {

@@ -89,8 +89,8 @@ MonoBehaviour:
   obstacleLayerMask:
     serializedVersion: 2
     m_Bits: 64
-  attackAnim: {fileID: 0}
-  idleAnim: {fileID: 0}
+  attackAnim: {fileID: 7400000, guid: 79840cc142cb8614cab98535fa580c00, type: 2}
+  idleAnim: {fileID: 7400000, guid: 577c071e42235054b89b2b514a1760e9, type: 2}
   attackSFX: {fileID: 8300000, guid: 4750c70ffaf21f345a73506b003e8a11, type: 3}
 --- !u!82 &-3716042307550868947
 AudioSource:
