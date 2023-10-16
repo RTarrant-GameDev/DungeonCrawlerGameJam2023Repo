@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerAttack : MonoBehaviour {
+public class PlayerMeleeAttack : MonoBehaviour {
     public int dmgNumber;
     public float cooldownTime;
     private float lastAttackTime;
