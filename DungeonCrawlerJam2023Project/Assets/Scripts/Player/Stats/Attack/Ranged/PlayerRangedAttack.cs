@@ -8,7 +8,6 @@ public class PlayerRangedAttack : MonoBehaviour {
     private float lastAttackTime;
     public AudioClip attackSFX;
     public GameObject swordObj;
-
     public AnimationClip[] animations;
 
     void Start() {
@@ -18,6 +17,7 @@ public class PlayerRangedAttack : MonoBehaviour {
     public void AttackCheck() {
         if(this.gameObject.GetComponent<PlayerMagicka>().currMagicka > 0){
             Debug.Log("Fireball launched!");
+            StartCoroutine(FireballAttack());
             this.gameObject.GetComponent<PlayerMagicka>().SubtractMP(25);
         }
     }
@@ -25,5 +25,13 @@ public class PlayerRangedAttack : MonoBehaviour {
     public float CooldownProgress() {
         float currentTime = Time.time;
         return currentTime - lastAttackTime;
+    }
+
+    public IEnumerator FireballAttack() {
+        animations[0].wrapMode = WrapMode.Once;
+        swordObj.GetComponent<Animator>().Play(animations[0].name, -1, 0f);
+        yield return new WaitForSeconds(0.3f);
+        this.gameObject.GetComponentInChildren<FireballLaunchScript>().ShootFireball();
+        this.gameObject.GetComponent<AudioSource>().PlayOneShot(attackSFX);
     }
 }

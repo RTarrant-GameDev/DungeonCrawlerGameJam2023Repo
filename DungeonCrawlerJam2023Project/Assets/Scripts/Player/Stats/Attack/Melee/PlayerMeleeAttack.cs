@@ -8,7 +8,6 @@ public class PlayerMeleeAttack : MonoBehaviour {
     private float lastAttackTime;
     public AudioClip attackSFX;
     public GameObject swordObj;
-
     public AnimationClip[] animations;
 
     void Start() {
