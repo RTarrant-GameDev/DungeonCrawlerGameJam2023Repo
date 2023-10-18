@@ -8,7 +8,7 @@ public class PlayerMagickaUI : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        // mpMeter.maxValue = GameObject.Find("Player(Clone)").GetComponent<PlayerMagicka>().maxMagicka;
-        // mpMeter.value = GameObject.Find("Player(Clone)").GetComponent<PlayerMagicka>().currMagicka;
+        mpMeter.maxValue = GameObject.Find("Player(Clone)").GetComponent<PlayerMagicka>().maxMagicka;
+        mpMeter.value = GameObject.Find("Player(Clone)").GetComponent<PlayerMagicka>().currMagicka;
     }
 }

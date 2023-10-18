@@ -14,7 +14,7 @@ public class PlayerRangedAttackCooldownScript : MonoBehaviour {
             cooldownMeter.gameObject.SetActive(true);
             GameObject.Find("rangedAttackButton").GetComponent<Button>().interactable = false;
         }
-        // cooldownMeter.maxValue = GameObject.Find("Player(Clone)").GetComponent<PlayerRangedAttack>().cooldownTime;
-        // cooldownMeter.value = GameObject.Find("Player(Clone)").GetComponent<PlayerRangedAttack>().CooldownProgress();
+        cooldownMeter.maxValue = GameObject.Find("Player(Clone)").GetComponent<PlayerRangedAttack>().cooldownTime;
+        cooldownMeter.value = GameObject.Find("Player(Clone)").GetComponent<PlayerRangedAttack>().CooldownProgress();
     }
 }

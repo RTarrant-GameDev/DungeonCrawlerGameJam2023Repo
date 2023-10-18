@@ -16,9 +16,7 @@ public class PlayerLevelScript : MonoBehaviour {
         }
 
         foreach (Transform swordObjChild in this.gameObject.GetComponent<PlayerMeleeAttack>().swordObj.transform) {
-            if(swordObjChild.name != "projectileOrigin") {
-                swordObjChild.gameObject.GetComponent<MeshRenderer>().material = currentLevel.swordMaterial;
-            }
+            swordObjChild.gameObject.GetComponent<MeshRenderer>().material = currentLevel.swordMaterial;
         }
     }
 
