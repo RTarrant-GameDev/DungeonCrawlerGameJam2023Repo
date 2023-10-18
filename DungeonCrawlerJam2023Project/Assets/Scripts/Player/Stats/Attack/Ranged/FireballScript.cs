@@ -8,6 +8,11 @@ public class FireballScript : MonoBehaviour {
     }
     void OnCollisionEnter(Collision other) {
         if(other.gameObject.tag == "Enemy") {
+            if(other.gameObject.name=="BossPrefab(Clone)"){
+                other.gameObject.GetComponent<BossHealth>().SubtractHP(GameObject.Find("Player(Clone)").GetComponent<PlayerRangedAttack>().dmgNumber);
+            } else {
+                other.gameObject.GetComponent<EnemyHealth>().SubtractHP(GameObject.Find("Player(Clone)").GetComponent<PlayerRangedAttack>().dmgNumber);
+            }
             this.gameObject.SetActive(false);
         }
     }

@@ -9,6 +9,7 @@ public class PlayerRangedAttack : MonoBehaviour {
     public AudioClip attackSFX;
     public GameObject swordObj;
     public AnimationClip[] animations;
+    public GameObject projectileOrigin;
 
     void Start() {
         dmgNumber = this.gameObject.GetComponent<PlayerLevelScript>().currentLevel.newLevelDmg;
@@ -16,9 +17,16 @@ public class PlayerRangedAttack : MonoBehaviour {
 
     public void AttackCheck() {
         if(this.gameObject.GetComponent<PlayerMagicka>().currMagicka > 0){
-            Debug.Log("Fireball launched!");
+            FireAtEnemy();
+        }
+    }
+
+    public void FireAtEnemy(){
+        float currentTime = Time.time;
+        if(CooldownProgress() >= cooldownTime) {
             StartCoroutine(FireballAttack());
             this.gameObject.GetComponent<PlayerMagicka>().SubtractMP(25);
+            lastAttackTime = currentTime;
         }
     }
 
@@ -31,7 +39,7 @@ public class PlayerRangedAttack : MonoBehaviour {
         animations[0].wrapMode = WrapMode.Once;
         swordObj.GetComponent<Animator>().Play(animations[0].name, -1, 0f);
         yield return new WaitForSeconds(0.3f);
-        this.gameObject.GetComponentInChildren<FireballLaunchScript>().ShootFireball();
+        projectileOrigin.GetComponent<FireballLaunchScript>().ShootFireball();
         this.gameObject.GetComponent<AudioSource>().PlayOneShot(attackSFX);
     }
 }
