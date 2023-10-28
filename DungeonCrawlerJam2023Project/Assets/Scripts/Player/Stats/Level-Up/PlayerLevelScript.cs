@@ -15,7 +15,7 @@ public class PlayerLevelScript : MonoBehaviour {
             checkXPForLevelUp();
         }
 
-        foreach (Transform swordObjChild in this.gameObject.GetComponent<PlayerAttack>().swordObj.transform) {
+        foreach (Transform swordObjChild in this.gameObject.GetComponent<PlayerMeleeAttack>().swordObj.transform) {
             swordObjChild.gameObject.GetComponent<MeshRenderer>().material = currentLevel.swordMaterial;
         }
     }
