@@ -40,6 +40,5 @@ public class PlayerRangedAttack : MonoBehaviour {
         swordObj.GetComponent<Animator>().Play(animations[0].name, -1, 0f);
         yield return new WaitForSeconds(0.3f);
         projectileOrigin.GetComponent<FireballLaunchScript>().ShootFireball();
-        this.gameObject.GetComponent<AudioSource>().PlayOneShot(attackSFX);
     }
 }

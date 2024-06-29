@@ -41,7 +41,7 @@ public class PlayerMeleeAttack : MonoBehaviour {
             if(enemy.name=="BossPrefab(Clone)"){
                 enemy.GetComponent<BossHealth>().SubtractHP(dmgNumber);
             } else {
-                enemy.GetComponent<EnemyHealth>().SubtractHP(dmgNumber);
+                enemy.GetComponent<EnemyHealth>().SubtractHP(dmgNumber, true);
             }
             lastAttackTime = currentTime;
         }

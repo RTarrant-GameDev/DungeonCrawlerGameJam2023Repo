@@ -38,7 +38,6 @@ public class EnemyCollision : WallCollisionDetection {
     public bool PlayerSpotted(Ray ray) {
         RaycastHit other = new RaycastHit();
         if(Physics.Raycast(ray.origin, ray.direction, out other) && other.transform.gameObject == player) {
-            Debug.Log("Player spotted by mob");
             return true; //if player spotted return true
         } else {
             return false;

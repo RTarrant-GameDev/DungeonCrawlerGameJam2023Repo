@@ -11,7 +11,8 @@ public class FireballScript : MonoBehaviour {
             if(other.gameObject.name=="BossPrefab(Clone)"){
                 other.gameObject.GetComponent<BossHealth>().SubtractHP(GameObject.Find("Player(Clone)").GetComponent<PlayerRangedAttack>().dmgNumber);
             } else {
-                other.gameObject.GetComponent<EnemyHealth>().SubtractHP(GameObject.Find("Player(Clone)").GetComponent<PlayerRangedAttack>().dmgNumber);
+                Debug.Log("Projectile hit enemy");
+                other.gameObject.GetComponent<EnemyHealth>().SubtractHP(GameObject.Find("Player(Clone)").GetComponent<PlayerRangedAttack>().dmgNumber, false);
             }
             this.gameObject.SetActive(false);
         }
