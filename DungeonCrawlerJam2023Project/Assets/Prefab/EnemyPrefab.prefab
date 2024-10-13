@@ -184,6 +184,7 @@ MonoBehaviour:
   currHP: 0
   maxHP: 20
   enemyXP: 10
+  KilledByMagic: 0
   damageSFX: {fileID: 8300000, guid: be847923c2d4f5445bf747e7699e3a14, type: 3}
   deathSFX: {fileID: 8300000, guid: b6e8f92d38f60f34ca1e901d127711bc, type: 3}
 --- !u!82 &-4389119472658859941
