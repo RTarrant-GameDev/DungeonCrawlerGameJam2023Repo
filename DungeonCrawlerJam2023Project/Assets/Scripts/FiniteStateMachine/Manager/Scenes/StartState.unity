@@ -2457,8 +2457,6 @@ MonoBehaviour:
     objectToSpawn: {fileID: 8489804989553642005, guid: afc5d022c4043a1418ac574c791932f1, type: 3}
   - associatedKey: 67
     objectToSpawn: {fileID: 8692320626851713345, guid: 9be570274da914d43860d6053f68ae9d, type: 3}
-  - associatedKey: 66
-    objectToSpawn: {fileID: 3686935092385065964, guid: 556c84ceaf34d844698b07f5ee6d3186, type: 3}
   enemies:
   - associatedKey: 76
     enemyName: Skeleton

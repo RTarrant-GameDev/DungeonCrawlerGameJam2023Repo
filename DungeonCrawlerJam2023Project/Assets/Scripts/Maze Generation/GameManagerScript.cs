@@ -99,7 +99,7 @@ public class GameManagerScript : MonoBehaviour {
                 break;
             }
         }
-        if(foundCharacter=='b') {
+        if(foundCharacter=='B') {
             foreach (Boss bObj in bosses) {
                 if(bObj.levelNumber == (System.Array.IndexOf(levels, currentLevel)+1)) {
                     PlaceBoss(bObj, posX, posZ);
