@@ -189,12 +189,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 276076179, guid: 02a1a00122053674cb3d8a06d51979e0, type: 3}
+  m_Sprite: {fileID: 1830322831, guid: 5da6eebe3e958e2489b2091e63998ee2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.796875, y: 1}
+  m_Size: {x: 0.92, y: 0.88}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -210,7 +210,7 @@ Animator:
   m_GameObject: {fileID: 3686935092385065964}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 22100000, guid: e6f0d3aacd447c2449edd32bb5a531c4, type: 2}
+  m_Controller: {fileID: 22100000, guid: dc35e15e414e71d408bdfda4943a630a, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -233,7 +233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1c67090862f46b40866a220a227719d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDmg: 0
+  attackDmg: 7
   player: {fileID: 3757105543209936647, guid: 0df1a88e8deb59c4f83ff88b4070ed34, type: 3}
   attackRange: 1.25
   attackCooldown: 2.5
@@ -243,8 +243,8 @@ MonoBehaviour:
   obstacleLayerMask:
     serializedVersion: 2
     m_Bits: 64
-  attackAnim: {fileID: 7400000, guid: 79840cc142cb8614cab98535fa580c00, type: 2}
-  idleAnim: {fileID: 7400000, guid: 577c071e42235054b89b2b514a1760e9, type: 2}
+  attackAnim: {fileID: 7400000, guid: c0f02508af3ffed4fbdfb6e2817991db, type: 2}
+  idleAnim: {fileID: 7400000, guid: a58cd5448b83dd64198f570a7486e56a, type: 2}
   attackSFX: {fileID: 8300000, guid: 4750c70ffaf21f345a73506b003e8a11, type: 3}
 --- !u!114 &8363929319169487719
 MonoBehaviour:
@@ -278,8 +278,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currHP: 0
-  maxHP: 0
-  enemyXP: 0
+  maxHP: 50
+  enemyXP: 1000
   damageSFX: {fileID: 8300000, guid: be847923c2d4f5445bf747e7699e3a14, type: 3}
   deathSFX: {fileID: 8300000, guid: b6e8f92d38f60f34ca1e901d127711bc, type: 3}
 --- !u!114 &5647692378718428198
@@ -294,4 +294,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c75e73637a3786e409afeadb0e6cecfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  overrideController: {fileID: 0}
+  overrideController: {fileID: 22100000, guid: dc35e15e414e71d408bdfda4943a630a, type: 2}

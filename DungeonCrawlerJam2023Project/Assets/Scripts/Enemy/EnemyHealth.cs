@@ -20,20 +20,12 @@ public class EnemyHealth : MonoBehaviour {
     {
         if (currHP <= 0)
         {
-            if (this.gameObject.tag == "Enemy")
+            if (KilledByMagic == false)
             {
-                if (KilledByMagic == false)
-                {
-                    Debug.Log("Enemy attacked with melee");
-                    GameObject.Find("Player(Clone)").GetComponent<PlayerLevelScript>().AddXP(
-                    (200 * GameObject.Find("Player(Clone)").GetComponent<PlayerLevelScript>().currentLevel.levelNumber));
-                }
-                else if (KilledByMagic == true)
-                {
-                    Debug.Log("Enemy attacked with magic");
-                }
+                GameObject.Find("Player(Clone)").GetComponent<PlayerLevelScript>().AddXP(
+                (200 * GameObject.Find("Player(Clone)").GetComponent<PlayerLevelScript>().currentLevel.levelNumber));
             }
-            else if (this.gameObject.tag == "Boss")
+            else if (KilledByMagic == true)
             {
                 GameObject.Find("Player(Clone)").GetComponent<PlayerLevelScript>().AddXP(enemyXP);
             }
@@ -43,10 +35,7 @@ public class EnemyHealth : MonoBehaviour {
         }
     }
 
-    public void SubtractHP(int hpToSubtract, bool GiveXP) {
-
-        Debug.Log($"Attacked by Magic: {!GiveXP}");
-        
+    public void SubtractHP(int hpToSubtract, bool GiveXP) { 
         currHP-= hpToSubtract;
         this.gameObject.GetComponent<AudioSource>().PlayOneShot(damageSFX);
 

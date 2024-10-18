@@ -2475,6 +2475,13 @@ MonoBehaviour:
     enemySprite: {fileID: -126368652, guid: 9d83e6dbb1442b24c85bd89eb79da9ba, type: 3}
     overrideController: {fileID: 22100000, guid: d3c36c532bb121e4b87f6702320a4f5c, type: 2}
   bosses:
+  - enemyName: Werewolf
+    enemyHP: 50
+    enemyAttack: 7
+    enemyXP: 1000
+    enemySprite: {fileID: 1830322831, guid: 5da6eebe3e958e2489b2091e63998ee2, type: 3}
+    overrideController: {fileID: 22100000, guid: dc35e15e414e71d408bdfda4943a630a, type: 2}
+    levelNumber: 1
   - enemyName: Corrupted Jailer
     enemyHP: 1200
     enemyAttack: 75
