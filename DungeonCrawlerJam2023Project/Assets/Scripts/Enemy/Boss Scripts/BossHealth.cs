@@ -14,19 +14,18 @@ public class BossHealth : MonoBehaviour {
         currHP = maxHP;
     }
 
-    public void SubtractHP(int hpToSubtract) {
-        if(currHP > 0){
-            currHP-= hpToSubtract;
-            this.gameObject.GetComponent<AudioSource>().PlayOneShot(damageSFX);
-        } else {
-            if(this.gameObject.tag == "Enemy") {
-                GameObject.Find("Player(Clone)").GetComponent<PlayerLevelScript>().AddXP(
-                (200*GameObject.Find("Player(Clone)").GetComponent<PlayerLevelScript>().currentLevel.levelNumber));
-            } else if(this.gameObject.tag == "Boss") {
-                GameObject.Find("Player(Clone)").GetComponent<PlayerLevelScript>().AddXP(enemyXP);
-            }
+    void Update()
+    {
+        if (currHP <= 0)
+        {
+            GameObject.Find("Player(Clone)").GetComponent<PlayerMagicka>().AddMP(enemyXP);
             this.gameObject.GetComponent<AudioSource>().PlayOneShot(deathSFX);
             Destroy(this.gameObject);
         }
+    }
+
+    public void SubtractHP(int hpToSubtract) {
+        currHP-= hpToSubtract;
+        this.gameObject.GetComponent<AudioSource>().PlayOneShot(damageSFX);
     }
 }
