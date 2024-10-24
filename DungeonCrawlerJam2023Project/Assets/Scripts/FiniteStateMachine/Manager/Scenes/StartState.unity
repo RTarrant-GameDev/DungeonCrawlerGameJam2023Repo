@@ -2480,6 +2480,13 @@ MonoBehaviour:
     enemySprite: {fileID: 1830322831, guid: 5da6eebe3e958e2489b2091e63998ee2, type: 3}
     overrideController: {fileID: 22100000, guid: dc35e15e414e71d408bdfda4943a630a, type: 2}
     levelNumber: 1
+  - enemyName: Skeletal Cyclops
+    enemyHP: 100
+    enemyAttack: 12
+    enemyXP: 1250
+    enemySprite: {fileID: 890300082, guid: d5194e4788744b54aa2997c5103865c4, type: 3}
+    overrideController: {fileID: 22100000, guid: ce17b0e6e7f8b034ca3cf3a444ec07db, type: 2}
+    levelNumber: 2
   - enemyName: Corrupted Jailer
     enemyHP: 1200
     enemyAttack: 75
